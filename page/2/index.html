@@ -161,6 +161,125 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-15. Mybatis" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/13/15.%20Mybatis/">15. Mybatis</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/13/15.%20Mybatis/" class="archive-article-date">
+  	<time datetime="2019-11-13T14:56:10.919Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h4><p>#####MyBatis 编程步骤</p>
+<ol>
+<li><p>创建 SqlSessionFactory 对象。</p>
+</li>
+<li><p>通过 SqlSessionFactory 获取 SqlSession 对象。</p>
+</li>
+<li><p>通过 SqlSession 获得 Mapper 代理对象。</p>
+</li>
+<li><p>通过 Mapper 代理对象，执行数据库操作。</p>
+</li>
+<li><p>执行成功，则使用 SqlSession 提交事务。</p>
+</li>
+<li><p>执行失败，则使用 SqlSession 回滚事务。</p>
+</li>
+<li><p>最终，关闭会话。</p>
+</li>
+</ol>
+<h5 id="MyBatis-如何执行批量插入"><a href="#MyBatis-如何执行批量插入" class="headerlink" title="MyBatis 如何执行批量插入?"></a>MyBatis 如何执行批量插入?</h5><ol>
+<li><p>使用Sql 拼接，有语句大小限制</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> [表名]([列名],[列名]) </span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">([列值],[列值])),</span><br><span class="line">([列值],[列值])),</span><br><span class="line">([列值],[列值]));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用Mybatis 的批量插入方式</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> SqlSessionFactory sqlSessionFactory;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testBatch</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 创建要插入的用户的名字的数组</span></span><br><span class="line">    List&lt;String&gt; names = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    names.add(<span class="string">"张三"</span>);</span><br><span class="line">    names.add(<span class="string">"李四"</span>);</span><br><span class="line">    names.add(<span class="string">"李二"</span>);</span><br><span class="line">    names.add(<span class="string">"王五"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获得执行器类型为 Batch 的 SqlSession 对象，并且 autoCommit = false ，禁止事务自动提交</span></span><br><span class="line">    <span class="keyword">try</span> (SqlSession session = sqlSessionFactory.openSession(ExecutorType.BATCH, <span class="keyword">false</span>)) &#123;</span><br><span class="line">        <span class="comment">// 获得 Mapper 对象</span></span><br><span class="line">        UserMapper mapper = session.getMapper(UserMapper<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        <span class="comment">// 循环插入</span></span><br><span class="line">        <span class="keyword">for</span> (String name : names) &#123;</span><br><span class="line">            mapper.insertUser(name);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 提交批量操作</span></span><br><span class="line">        session.commit();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用循环一条条插入</p>
+</li>
+</ol>
+<p>#####Mybatis 的 XML Mapper文件中，不同的 XML 映射文件，id 是否可以重复？</p>
+<p>不同的 XML Mapper 文件，如果配置了 <code>&quot;namespace&quot;</code> ，那么 id 可以重复；如果没有配置 <code>&quot;namespace&quot;</code> ，那么 id 不能重复。毕竟<code>&quot;namespace&quot;</code> 不是必须的，只是最佳实践而已。</p>
+<p>原因就是，<code>namespace + id</code> 是作为 <code>Map&lt;String, MappedStatement&gt;</code> 的 key 使用的。如果没有 <code>&quot;namespace&quot;</code>，就剩下 id ，那么 id 重复会导致数据互相覆盖。如果有了 <code>&quot;namespace&quot;</code>，自然 id 就可以重复，<code>&quot;namespace&quot;</code>不同，<code>namespace + id</code> 自然也就不同。</p>
+<h5 id="简述-Mybatis-的-XML-映射文件和-Mybatis-内部数据结构之间的映射关系？"><a href="#简述-Mybatis-的-XML-映射文件和-Mybatis-内部数据结构之间的映射关系？" class="headerlink" title="简述 Mybatis 的 XML 映射文件和 Mybatis 内部数据结构之间的映射关系？"></a>简述 Mybatis 的 XML 映射文件和 Mybatis 内部数据结构之间的映射关系？</h5><p>Mybatis 将所有 XML 配置信息都封装到 All-In-One 重量级对象Configuration内部。</p>
+<p>在 XML Mapper 文件中：</p>
+<ul>
+<li><p><code>&lt;parameterMap&gt;</code> 标签，会被解析为 ParameterMap 对象，其每个子元素会被解析为 ParameterMapping 对象。</p>
+</li>
+<li><p><code>&lt;resultMap&gt;</code> 标签，会被解析为 ResultMap 对象，其每个子元素会被解析为 ResultMapping 对象。</p>
+</li>
+<li><p>每一个 <code>&lt;select&gt;</code>、<code>&lt;insert&gt;</code>、<code>&lt;update&gt;</code>、<code>&lt;delete&gt;</code> 标签，均会被解析为一个 MappedStatement 对象，标签内的 SQL 会被解析为一个 BoundSql 对象。</p>
+</li>
+</ul>
+<h5 id="通常一个-XML-映射文件，都会写一个-Mapper-接口与之对应。请问，这个-Mapper-接口的工作原理是什么？Mapper-接口里的方法，参数不同时，方法能重载吗？"><a href="#通常一个-XML-映射文件，都会写一个-Mapper-接口与之对应。请问，这个-Mapper-接口的工作原理是什么？Mapper-接口里的方法，参数不同时，方法能重载吗？" class="headerlink" title="通常一个 XML 映射文件，都会写一个 Mapper 接口与之对应。请问，这个 Mapper 接口的工作原理是什么？Mapper 接口里的方法，参数不同时，方法能重载吗？"></a>通常一个 XML 映射文件，都会写一个 Mapper 接口与之对应。请问，这个 Mapper 接口的工作原理是什么？Mapper 接口里的方法，参数不同时，方法能重载吗？</h5><p>Mapper 接口，对应的关系如下：</p>
+<ul>
+<li>接口的全限名，就是映射文件中的 <code>&quot;namespace&quot;</code> 的值。</li>
+<li>接口的方法名，就是映射文件中 MappedStatement 的 <code>&quot;id&quot;</code> 值。</li>
+<li>接口方法内的参数，就是传递给 SQL 的参数。</li>
+</ul>
+<p>Mapper 接口是没有实现类的，当调用接口方法时，接口全限名 + 方法名拼接字符串作为 key 值，可唯一定位一个对应的 MappedStatement 。举例：<code>com.mybatis3.mappers.StudentDao.findStudentById</code> ，可以唯一找到 <code>&quot;namespace&quot;</code> 为 <code>com.mybatis3.mappers.StudentDao</code> 下面 <code>&quot;id&quot;</code> 为 <code>findStudentById</code> 的 MappedStatement 。</p>
+<p>总结来说，在 Mybatis 中，每一个 <code>&lt;select /&gt;</code>、<code>&lt;insert /&gt;</code>、<code>&lt;update /&gt;</code>、<code>&lt;delete /&gt;</code> 标签，都会被解析为一个 MappedStatement 对象。</p>
+<p>另外，Mapper 接口的实现类，通过 MyBatis 使用 <strong>JDK Proxy</strong> 自动生成其代理对象 Proxy ，而代理对象 Proxy 会拦截接口方法，从而“调用”对应的 MappedStatement 方法，最终执行 SQL ，返回执行结果。整体流程如下图：<img src="http://static2.iocoder.cn/images/MyBatis/2020_03_15/02.png" alt="流程" style="zoom: 67%;" /></p>
+<ul>
+<li><p>其中，SqlSession 在调用 Executor 之前，会获得对应的 MappedStatement 方法。例如：<code>DefaultSqlSession#select(String statement, Object parameter, RowBounds rowBounds, ResultHandler handler)</code> 方法，代码如下：</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// DefaultSqlSession.java</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">select</span><span class="params">(String statement, Object parameter, RowBounds rowBounds, ResultHandler handler)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// 获得 MappedStatement 对象</span></span><br><span class="line">        MappedStatement ms = configuration.getMappedStatement(statement);</span><br><span class="line">        <span class="comment">// 执行查询</span></span><br><span class="line">        executor.query(ms, wrapCollection(parameter), rowBounds, handler);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        <span class="keyword">throw</span> ExceptionFactory.wrapException(<span class="string">"Error querying database.  Cause: "</span> + e, e);</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        ErrorContext.instance().reset();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<p>Mapper 接口里的方法，是不能重载的，因为是<strong>全限名 + 方法名</strong>的保存和寻找策略</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/13/15.%20Mybatis/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-16. Zookeeper" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -353,125 +472,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/11/13/16.%20Zookeeper/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-15. Mybatis" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/13/15.%20Mybatis/">15. Mybatis</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/13/15.%20Mybatis/" class="archive-article-date">
-  	<time datetime="2019-11-13T14:56:10.919Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h4><p>#####MyBatis 编程步骤</p>
-<ol>
-<li><p>创建 SqlSessionFactory 对象。</p>
-</li>
-<li><p>通过 SqlSessionFactory 获取 SqlSession 对象。</p>
-</li>
-<li><p>通过 SqlSession 获得 Mapper 代理对象。</p>
-</li>
-<li><p>通过 Mapper 代理对象，执行数据库操作。</p>
-</li>
-<li><p>执行成功，则使用 SqlSession 提交事务。</p>
-</li>
-<li><p>执行失败，则使用 SqlSession 回滚事务。</p>
-</li>
-<li><p>最终，关闭会话。</p>
-</li>
-</ol>
-<h5 id="MyBatis-如何执行批量插入"><a href="#MyBatis-如何执行批量插入" class="headerlink" title="MyBatis 如何执行批量插入?"></a>MyBatis 如何执行批量插入?</h5><ol>
-<li><p>使用Sql 拼接，有语句大小限制</p>
- <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> [表名]([列名],[列名]) </span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">([列值],[列值])),</span><br><span class="line">([列值],[列值])),</span><br><span class="line">([列值],[列值]));</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用Mybatis 的批量插入方式</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> SqlSessionFactory sqlSessionFactory;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testBatch</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 创建要插入的用户的名字的数组</span></span><br><span class="line">    List&lt;String&gt; names = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    names.add(<span class="string">"张三"</span>);</span><br><span class="line">    names.add(<span class="string">"李四"</span>);</span><br><span class="line">    names.add(<span class="string">"李二"</span>);</span><br><span class="line">    names.add(<span class="string">"王五"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获得执行器类型为 Batch 的 SqlSession 对象，并且 autoCommit = false ，禁止事务自动提交</span></span><br><span class="line">    <span class="keyword">try</span> (SqlSession session = sqlSessionFactory.openSession(ExecutorType.BATCH, <span class="keyword">false</span>)) &#123;</span><br><span class="line">        <span class="comment">// 获得 Mapper 对象</span></span><br><span class="line">        UserMapper mapper = session.getMapper(UserMapper<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        <span class="comment">// 循环插入</span></span><br><span class="line">        <span class="keyword">for</span> (String name : names) &#123;</span><br><span class="line">            mapper.insertUser(name);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 提交批量操作</span></span><br><span class="line">        session.commit();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用循环一条条插入</p>
-</li>
-</ol>
-<p>#####Mybatis 的 XML Mapper文件中，不同的 XML 映射文件，id 是否可以重复？</p>
-<p>不同的 XML Mapper 文件，如果配置了 <code>&quot;namespace&quot;</code> ，那么 id 可以重复；如果没有配置 <code>&quot;namespace&quot;</code> ，那么 id 不能重复。毕竟<code>&quot;namespace&quot;</code> 不是必须的，只是最佳实践而已。</p>
-<p>原因就是，<code>namespace + id</code> 是作为 <code>Map&lt;String, MappedStatement&gt;</code> 的 key 使用的。如果没有 <code>&quot;namespace&quot;</code>，就剩下 id ，那么 id 重复会导致数据互相覆盖。如果有了 <code>&quot;namespace&quot;</code>，自然 id 就可以重复，<code>&quot;namespace&quot;</code>不同，<code>namespace + id</code> 自然也就不同。</p>
-<h5 id="简述-Mybatis-的-XML-映射文件和-Mybatis-内部数据结构之间的映射关系？"><a href="#简述-Mybatis-的-XML-映射文件和-Mybatis-内部数据结构之间的映射关系？" class="headerlink" title="简述 Mybatis 的 XML 映射文件和 Mybatis 内部数据结构之间的映射关系？"></a>简述 Mybatis 的 XML 映射文件和 Mybatis 内部数据结构之间的映射关系？</h5><p>Mybatis 将所有 XML 配置信息都封装到 All-In-One 重量级对象Configuration内部。</p>
-<p>在 XML Mapper 文件中：</p>
-<ul>
-<li><p><code>&lt;parameterMap&gt;</code> 标签，会被解析为 ParameterMap 对象，其每个子元素会被解析为 ParameterMapping 对象。</p>
-</li>
-<li><p><code>&lt;resultMap&gt;</code> 标签，会被解析为 ResultMap 对象，其每个子元素会被解析为 ResultMapping 对象。</p>
-</li>
-<li><p>每一个 <code>&lt;select&gt;</code>、<code>&lt;insert&gt;</code>、<code>&lt;update&gt;</code>、<code>&lt;delete&gt;</code> 标签，均会被解析为一个 MappedStatement 对象，标签内的 SQL 会被解析为一个 BoundSql 对象。</p>
-</li>
-</ul>
-<h5 id="通常一个-XML-映射文件，都会写一个-Mapper-接口与之对应。请问，这个-Mapper-接口的工作原理是什么？Mapper-接口里的方法，参数不同时，方法能重载吗？"><a href="#通常一个-XML-映射文件，都会写一个-Mapper-接口与之对应。请问，这个-Mapper-接口的工作原理是什么？Mapper-接口里的方法，参数不同时，方法能重载吗？" class="headerlink" title="通常一个 XML 映射文件，都会写一个 Mapper 接口与之对应。请问，这个 Mapper 接口的工作原理是什么？Mapper 接口里的方法，参数不同时，方法能重载吗？"></a>通常一个 XML 映射文件，都会写一个 Mapper 接口与之对应。请问，这个 Mapper 接口的工作原理是什么？Mapper 接口里的方法，参数不同时，方法能重载吗？</h5><p>Mapper 接口，对应的关系如下：</p>
-<ul>
-<li>接口的全限名，就是映射文件中的 <code>&quot;namespace&quot;</code> 的值。</li>
-<li>接口的方法名，就是映射文件中 MappedStatement 的 <code>&quot;id&quot;</code> 值。</li>
-<li>接口方法内的参数，就是传递给 SQL 的参数。</li>
-</ul>
-<p>Mapper 接口是没有实现类的，当调用接口方法时，接口全限名 + 方法名拼接字符串作为 key 值，可唯一定位一个对应的 MappedStatement 。举例：<code>com.mybatis3.mappers.StudentDao.findStudentById</code> ，可以唯一找到 <code>&quot;namespace&quot;</code> 为 <code>com.mybatis3.mappers.StudentDao</code> 下面 <code>&quot;id&quot;</code> 为 <code>findStudentById</code> 的 MappedStatement 。</p>
-<p>总结来说，在 Mybatis 中，每一个 <code>&lt;select /&gt;</code>、<code>&lt;insert /&gt;</code>、<code>&lt;update /&gt;</code>、<code>&lt;delete /&gt;</code> 标签，都会被解析为一个 MappedStatement 对象。</p>
-<p>另外，Mapper 接口的实现类，通过 MyBatis 使用 <strong>JDK Proxy</strong> 自动生成其代理对象 Proxy ，而代理对象 Proxy 会拦截接口方法，从而“调用”对应的 MappedStatement 方法，最终执行 SQL ，返回执行结果。整体流程如下图：<img src="http://static2.iocoder.cn/images/MyBatis/2020_03_15/02.png" alt="流程" style="zoom: 67%;" /></p>
-<ul>
-<li><p>其中，SqlSession 在调用 Executor 之前，会获得对应的 MappedStatement 方法。例如：<code>DefaultSqlSession#select(String statement, Object parameter, RowBounds rowBounds, ResultHandler handler)</code> 方法，代码如下：</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// DefaultSqlSession.java</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">select</span><span class="params">(String statement, Object parameter, RowBounds rowBounds, ResultHandler handler)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// 获得 MappedStatement 对象</span></span><br><span class="line">        MappedStatement ms = configuration.getMappedStatement(statement);</span><br><span class="line">        <span class="comment">// 执行查询</span></span><br><span class="line">        executor.query(ms, wrapCollection(parameter), rowBounds, handler);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        <span class="keyword">throw</span> ExceptionFactory.wrapException(<span class="string">"Error querying database.  Cause: "</span> + e, e);</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        ErrorContext.instance().reset();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-<p>Mapper 接口里的方法，是不能重载的，因为是<strong>全限名 + 方法名</strong>的保存和寻找策略</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/13/15.%20Mybatis/">展开全文 >></a>
         </p>
       
 
