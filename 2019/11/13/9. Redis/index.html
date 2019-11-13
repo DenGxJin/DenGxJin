@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://dxjin.cn">
-  <title>博文中添加图片 | 白饭的正确吃法</title>
+  <title>9. Redis | 白饭的正确吃法</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="方法一（1）在hexo目录下安装插件： 1npm install hexo-asset-image --save  （2）在hexo&#x2F;source目录下创建img文件夹，把图片放置在里面； （3）在xxx.md文件中引用图片： 1![header]( img&#x2F;header.jpg)   方法二(1)在全局配置文件（hexo&#x2F;_config.yml)中将post_asset _folder设置为tr">
+  <meta name="description" content="Redis[TOC]  建议阅读《Redis开发与运维》《Redis设计与实现》《Redis深度历险：核心原理和应用实践》  Redis 为什么是单线程? 为什么单线程还能这么快？单线程能够避免线程切换和竞态产生的消耗，而且单线程可以简化数据结构和算法的实现至于单线程还快，是因为Redis是基于内存的数据库，内存响应速度是很快的，并且采用epoll作为I&#x2F;O多路复用技术，再加上Redis自身的事件">
 <meta name="keywords" content="java,stringboot,springcloud,后端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博文中添加图片">
-<meta property="og:url" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;index.html">
+<meta property="og:title" content="9. Redis">
+<meta property="og:url" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;13&#x2F;9.%20Redis&#x2F;index.html">
 <meta property="og:site_name" content="白饭的正确吃法">
-<meta property="og:description" content="方法一（1）在hexo目录下安装插件： 1npm install hexo-asset-image --save  （2）在hexo&#x2F;source目录下创建img文件夹，把图片放置在里面； （3）在xxx.md文件中引用图片： 1![header]( img&#x2F;header.jpg)   方法二(1)在全局配置文件（hexo&#x2F;_config.yml)中将post_asset _folder设置为tr">
+<meta property="og:description" content="Redis[TOC]  建议阅读《Redis开发与运维》《Redis设计与实现》《Redis深度历险：核心原理和应用实践》  Redis 为什么是单线程? 为什么单线程还能这么快？单线程能够避免线程切换和竞态产生的消耗，而且单线程可以简化数据结构和算法的实现至于单线程还快，是因为Redis是基于内存的数据库，内存响应速度是很快的，并且采用epoll作为I&#x2F;O多路复用技术，再加上Redis自身的事件">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;img&#x2F;71862163_p0.jpg">
-<meta property="og:updated_time" content="2019-11-06T08:45:32.262Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g6lnmw7glhj31240u0aou.jpg">
+<meta property="og:updated_time" content="2019-10-26T18:25:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;img&#x2F;71862163_p0.jpg">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g6lnmw7glhj31240u0aou.jpg">
   
     <link rel="alternative" href="/atom.xml" title="白饭的正确吃法" type="application/atom+xml">
   
@@ -162,43 +162,724 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-博文中添加图片" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-9. Redis" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      博文中添加图片
+      9. Redis
     </h1>
   
 
         
-        <a href="/2019/11/06/%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87/" class="archive-article-date">
-  	<time datetime="2019-11-06T07:57:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
+        <a href="/2019/11/13/9.%20Redis/" class="archive-article-date">
+  	<time datetime="2019-11-13T14:56:10.888Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>（1）在hexo目录下安装插件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-
-<p>（2）在hexo/source目录下创建img文件夹，把图片放置在里面；</p>
-<p>（3）在xxx.md文件中引用图片：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![header]( img/header.jpg)</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>(1)在全局配置文件（hexo/_config.yml)中将post_asset _folder设置为true；</p>
-<p>(2)创建文章（在创建的时候，会在hexo/source/_post目录下，生成一个XXX.md文件和一个XXX的文件夹）:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"XXX"</span></span><br></pre></td></tr></table></figure>
-<p>(3)把XXX这个博文需要展示的图片放在XXX文件夹目录下；</p>
-<p>(4)在XXX.md文件中引入图片的方式：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img example.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="添加如下"><a href="#添加如下" class="headerlink" title="添加如下"></a>添加如下</h3><p><img src="img/71862163_p0.jpg" alt="header"></p>
-
+        <h4 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h4><p>[TOC]</p>
+<blockquote>
+<p>建议阅读《Redis开发与运维》《Redis设计与实现》《Redis深度历险：核心原理和应用实践》</p>
+</blockquote>
+<h5 id="Redis-为什么是单线程-为什么单线程还能这么快？"><a href="#Redis-为什么是单线程-为什么单线程还能这么快？" class="headerlink" title="Redis 为什么是单线程? 为什么单线程还能这么快？"></a>Redis 为什么是单线程? 为什么单线程还能这么快？</h5><p>单线程能够避免线程切换和竞态产生的消耗，而且单线程可以简化数据结构和算法的实现<br>至于单线程还快，是因为Redis是基于内存的数据库，内存响应速度是很快的，并且采用epoll作为I/O多路复用技术，再加上Redis自身的事件处理模型将epoll中的连接、读写、关闭都转换为事件，不在网络I/O上浪费过多时间  </p>
+<blockquote>
+<p>epoll是为了解决Linux内核处理大量文件描述符提出的方案，属于Linux下多路I/O复用接口中select/poll的增强,经常用于Linux下高并发服务型程序，特别是大量并发连接中只有少部分处于活跃下的情况，能提高CPU利用率。<br>epoll采用事件驱动，只需要遍历那些被内核IO事件异步唤醒之后加入到就绪队列并返回到用户空间的描述符集合<br>epoll提供两种触发模式，水平触发（LT）和边沿触发（ET）,目前效率最高的IO操作方案是：epoll+ET+非阻塞IO模型</p>
+</blockquote>
+<h5 id="Redis-使用场景"><a href="#Redis-使用场景" class="headerlink" title="Redis 使用场景"></a>Redis 使用场景</h5><p>最多的应用于缓存，其他可以用于排行榜、计数器、消息队列等</p>
+<h5 id="Redis-持久化机制"><a href="#Redis-持久化机制" class="headerlink" title="Redis 持久化机制"></a>Redis 持久化机制</h5><p>1.RDB持久化：<br>把当前进程数据生成快照保存到硬盘的过程，触发方式有手动触发和自动触发<br>手动触发命令：save和bgsave命令</p>
+<ul>
+<li>save命令：阻塞当前Redis服务，直到RDB过程完成为止，不建议线上环境使用</li>
+<li>bgsave命令：Redis进程执行fork操作创建子进程，RDB持久化过程由子进程负责，完成后自动结束，阻塞只发生在fork阶段，一般时间很短<br>自动触发：</li>
+<li>使用save相关配置，如”save m n”。表示m秒内数据集存在n次修改时，自动触发</li>
+<li>如果从节点执行全量复制操作，主节点自动执行bgsave 生成RDB文件并发送给从节点</li>
+<li>执行debug reload命令重新加载Redis时，也会自动触发save操作</li>
+<li>默认情况下执行shutdown命令时，如果没有开始AOF持久化则自动执行bgsave</li>
+</ul>
+<p>RDB文件保存在dir配置指定的目录下，文件名通过dbfilename配置指定，可以通过执行config set dir {newDir} 和 config set dbfilename {newFileName} 运行期动态执行，当下次运行时RDB文件会保存到新目录</p>
+<ul>
+<li>遇到磁盘损坏或写满时，可以通过config set dir 在线修改文件路径到可用的磁盘路径，之后执行bgsave进行磁盘切换</li>
+<li>redis默认采用LZF算法对生成的RDB文件进行压缩，压缩后文件元小于内存大小，默认开启，可以通过参数config set rdbcompression {yes|no}动态修改</li>
+</ul>
+<p>RDB优点：</p>
+<ul>
+<li>RDB是一个紧凑的二进制文件，代表Redis在某个时间点上的数据快照，适合备份，全量复制等场景</li>
+<li>Redis加载RDB恢复数据远远快于AOF方式   </li>
+</ul>
+<p>RDB缺点：</p>
+<ul>
+<li>没办法做到实时持久化/秒级持久化</li>
+<li>RDB文件使用特定二进制保存，存在兼容问题</li>
+</ul>
+<p>2.AOF持久化<br>以独立日志的方式记录每次写命令，写入的内容直接是文本协议格式，重启时再重新执行AOF文件中的命令达到恢复数据的目的，解决了数据持久化实时性问题<br>开启AOF：appendonly yes,默认不开启<br>AOF文件名： appendfilename 配置，默认appendonly.aof<br>保存路径：同RDB，通过dir配置</p>
+<p>AOF工作流程：</p>
+<ol>
+<li>所有的写入命令追加到aof_buf(缓冲区)中</li>
+<li>AOF缓冲区根据对应的策略向硬盘做同步操作</li>
+<li>随着AOF文件越来越大，需要定期对AOF文件进行重写，压缩，父进程执行fork创建子进程，由子进程根据内存快照执行AOF重写，父进行继续响应后面的命令，在子进程完成重写后，父进程再把新增的写入命令写入到新的AOF文件中</li>
+<li>Redis服务重启，加载AOF文件进行数据恢复</li>
+</ol>
+<p>AOF为什么直接采用文本协议格式？</p>
+<ul>
+<li>文本协议具有良好的兼容性</li>
+<li>开启AOF后，所有写入命令都包含追加操作，直接采用协议格式，避免二次处理开销</li>
+<li>文本协议具有可读性，方便直接修改和处理</li>
+</ul>
+<p>AOF 为什么把命令追加到aof_buf中</p>
+<ul>
+<li>写入缓存区aof_buf中，能提高性能，并且Redis提供了多种缓存区同步硬盘策略</li>
+</ul>
+<p>重写后的AOF文件为什么可以变小？</p>
+<ul>
+<li>进程内已经超时的数据不再写入文件</li>
+<li>旧的AOF文件含有无效命令，重写使用进程内数据直接生成，新的AOF文件只保留最终数据的写入命令</li>
+<li>多条写命令可以合并为一个，为了防止溢出，以64个元素为界拆分为多条</li>
+</ul>
+<p>AOF缓冲区同步策略，通过参数appendfsync控制</p>
+<table>
+<thead>
+<tr>
+<th>可配置值</th>
+<th>说明</th>
+<th>其他</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>always</td>
+<td>命令写入aof_buf后调用系统fsync操作同步到AOF文件，fsync完成后线程返回</td>
+<td>每次写入都要同步AOF文件，在一般的SATA硬盘很难达到高性能</td>
+</tr>
+<tr>
+<td>everysec</td>
+<td>命令写入aof_buf后调用系统write操作，write完成后线程返回。fsync同步操作由线程每秒调用一次（建议策略）</td>
+<td>默认同步策略</td>
+</tr>
+<tr>
+<td>no</td>
+<td>命令写入aof_buf后调用系统write操作，不对AOF文件做fsync同步，同步硬盘操作由操作系统负责，通常同步周期最长30秒</td>
+<td>操作系统每次同步AOF文件的周期不可控，而且会加大每次同步硬盘的数据量，虽然提升了性能，但数据安全性无法保证</td>
+</tr>
+</tbody></table>
+<p>AOF手动触发：调用bgrewriteaof命令<br>自动触发：有两个参数</p>
+<ul>
+<li>auto-aof-rewrite-min-size: 表示运行时AOF重写时文件最小体积，默认64MB</li>
+<li>auto-aof-rewrite-percentage: 代表当前AOF文件空间（aof_current_size）和上一次重写后AOF文件空间(aof_base_size) 的比值<br>自动触发时机=aof_current_size &gt; auto-aof-rewrite-min-size &amp;&amp; (aof_current_size -aof_base_size) / aof_base_size &gt;= auto-aof-rewrite-percentage</li>
+</ul>
+<p>RDB和AOF同时开启，并且AOF文件存在，优先加载AOF文件</p>
+<p>AOF文件错误，可以通过redis-check-aof-fix 修复</p>
+<h5 id="Redis-数据类型"><a href="#Redis-数据类型" class="headerlink" title="Redis 数据类型"></a>Redis 数据类型</h5><blockquote>
+<p>字符串<br>key是字符串类型，字符串类型的值可以是字符串、数字、二进制（最大不能超过512MB)，是动态字符串，内部通过预分配冗余空间的方式来减少内存的频繁分配  </p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>set</td>
+<td>设置值</td>
+<td>key<br> value<br> [ex seconds] 为键设置秒级过期时间<br> [px milliseconds] 为键设置毫秒级别的过期时间 <br> [nx|xx] nx键必须不存在才可以设置成功 xx键必须存在才可以设置成功</td>
+</tr>
+<tr>
+<td>mset</td>
+<td>批量设置值</td>
+<td>key<br> value<br> [key value …]</td>
+</tr>
+<tr>
+<td>mget</td>
+<td>批量获取值</td>
+<td>key<br> [key …]</td>
+</tr>
+<tr>
+<td>incr</td>
+<td>对值做自增操作</td>
+<td>值不是整数，返回错误<br> 值是整数，返回自增后的结果<br> 键不存在，按照值为0自增，返回结果为1</td>
+</tr>
+<tr>
+<td>decr</td>
+<td>自减</td>
+<td>key</td>
+</tr>
+<tr>
+<td>incrby</td>
+<td>自增指定数字</td>
+<td>key increment</td>
+</tr>
+<tr>
+<td>decrby</td>
+<td>自减指定数字</td>
+<td>key decrement</td>
+</tr>
+<tr>
+<td>incrbyfloat</td>
+<td>自增浮点数</td>
+<td>key increment</td>
+</tr>
+<tr>
+<td>append</td>
+<td>追加值</td>
+<td>key value</td>
+</tr>
+<tr>
+<td>strlen</td>
+<td>字符串长度</td>
+<td>key</td>
+</tr>
+<tr>
+<td>getset</td>
+<td>设置并返回原值</td>
+<td>key value</td>
+</tr>
+<tr>
+<td>setrange</td>
+<td>设置指定位置的字符</td>
+<td>key offeset value</td>
+</tr>
+<tr>
+<td>getrange</td>
+<td>获取部分字符串</td>
+<td>key start end</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>哈希<br>一个键值对结构, 内部结构同Java的 HashMap, 数组+链表的结构，值只能存储字符串。另外在rehash的时候，采用定时任务渐进式迁移内容</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hset</td>
+<td>设置值</td>
+<td>key field value</td>
+</tr>
+<tr>
+<td>hsetnx</td>
+<td>类似setnx</td>
+<td>-</td>
+</tr>
+<tr>
+<td>hget</td>
+<td>获取值</td>
+<td>key field</td>
+</tr>
+<tr>
+<td>hdel</td>
+<td>删除一个或多个field</td>
+<td>key field [field …]</td>
+</tr>
+<tr>
+<td>hlen</td>
+<td>计算field个数</td>
+<td>-</td>
+</tr>
+<tr>
+<td>hmget</td>
+<td>批量获取</td>
+<td>key field [field …]</td>
+</tr>
+<tr>
+<td>hmset</td>
+<td>批量设置</td>
+<td>key field value [field value …]</td>
+</tr>
+<tr>
+<td>hexists</td>
+<td>判断field是否存在</td>
+<td>key field</td>
+</tr>
+<tr>
+<td>hkeys</td>
+<td>获取所有field</td>
+<td>key</td>
+</tr>
+<tr>
+<td>hvals</td>
+<td>获取所有value</td>
+<td>key</td>
+</tr>
+<tr>
+<td>hgetall</td>
+<td>获取所有的field-value</td>
+<td>key<br> 如果元素很多，会造成阻塞，建议使用hscan</td>
+</tr>
+<tr>
+<td>hincrby hincrbyfloat</td>
+<td>类似incrby / incrbyfloat</td>
+<td>key field increment</td>
+</tr>
+<tr>
+<td>hstrlen</td>
+<td>计算value字符串长度</td>
+<td>key field</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>列表<br>用来存储多个有序的字符串，一个列表最多可以存储2<sup>32</sup> - 1 个元素,列表中的元素可以是重复的，相当于Java中的LinkedList, 是一个链表而不是数组, 底层是采用quicklist结构，在数据量少的时候会使用ziplist压缩列表，数据量多的时候才使用quicklist</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>rpush</td>
+<td>从右边插入元素</td>
+<td>key value [value …]</td>
+</tr>
+<tr>
+<td>lpush</td>
+<td>从左边插入元素</td>
+<td>key value [value …]</td>
+</tr>
+<tr>
+<td>linsert</td>
+<td>向某个元素前或者后插入元素</td>
+<td>key before|after pivot value<br> 从列表中找到等于pivot元素，在其前before 或者after 插入一个新的元素value</td>
+</tr>
+<tr>
+<td>lrange</td>
+<td>获取指定范围内的元素列表</td>
+<td>key start end<br> 索引下标从左到右是0到N-1, 从右到左是-1到-N; end包含自身</td>
+</tr>
+<tr>
+<td>lindex</td>
+<td>获取列表指定索引下标的元素</td>
+<td>key index</td>
+</tr>
+<tr>
+<td>llen</td>
+<td>获取列表长度</td>
+<td>key</td>
+</tr>
+<tr>
+<td>lpop</td>
+<td>从列表左侧弹出元素</td>
+<td>key</td>
+</tr>
+<tr>
+<td>rpop</td>
+<td>从列表右侧弹出元素</td>
+<td>key</td>
+</tr>
+<tr>
+<td>lrem</td>
+<td>删除指定元素</td>
+<td>key count value<br> 从列表中找到等于value的元素进行删除，count&gt;0, 从左到右，删除最多count个元素。count&lt;0, 从右到左，删除最多count绝对值个元素。count=0,删除所有</td>
+</tr>
+<tr>
+<td>ltrim</td>
+<td>按照索引范围修剪列表</td>
+<td>key start end</td>
+</tr>
+<tr>
+<td>lset</td>
+<td>修改指定索引下标的元素</td>
+<td>key index newValue</td>
+</tr>
+<tr>
+<td>blpop<br> brpop</td>
+<td>弹出元素阻塞版</td>
+<td>key [key …] 多个键<br> timeount 阻塞时间(秒)</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>集合(set)<br>用来保存多个的字符串的元素，但和列表元素不一样的是，集合中不允许有重复元素，并且集合中的元素是无序的，不能通过索引下标获取元素，一个集合最多可以存储2<sup>32</sup> - 1个元素<br>当集合元素个数都是整数并且元素个数小于set-max-intset-entries配置(默认512个)时，使用intset编码减少内存使用，否则使用hashtable编码</p>
+<p>相当于Java中的HashSet, 所有的value都是一个值NULL</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sadd</td>
+<td>添加元素</td>
+<td>key element [element …]</td>
+</tr>
+<tr>
+<td>srem</td>
+<td>删除元素</td>
+<td>key element [element …]</td>
+</tr>
+<tr>
+<td>scard</td>
+<td>计算元素个数</td>
+<td>key</td>
+</tr>
+<tr>
+<td>sismember</td>
+<td>判断元素是否在集合中</td>
+<td>key element</td>
+</tr>
+<tr>
+<td>srandmember</td>
+<td>随机从集合返回指定个数元素</td>
+<td>key [count]</td>
+</tr>
+<tr>
+<td>spop</td>
+<td>从集合随机弹出元素,会删除元素</td>
+<td>key [count]</td>
+</tr>
+<tr>
+<td>smembers</td>
+<td>获取所有元素</td>
+<td>key</td>
+</tr>
+<tr>
+<td>sinter</td>
+<td>求多个集合的交集</td>
+<td>key [key …]</td>
+</tr>
+<tr>
+<td>sunion</td>
+<td>求多个集合的并集</td>
+<td>key [key …]</td>
+</tr>
+<tr>
+<td>sdiff</td>
+<td>求多个集合的差集</td>
+<td>key [key …]</td>
+</tr>
+<tr>
+<td>sinterstore<br>suionstore<br>sdiffstore</td>
+<td>将交集、并集、差集的结果保存</td>
+<td>destination key [key…]<br> destination 目标集合名称<br>集合间的运算在元素比较多的情况下会比较耗时</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>有序集合<br>集合不能重复，但集合中的元素可以根据score分数排序,排序从0开始<br>当有序集合的元素个数小于zset-max-ziplist-entries(默认128个)，同时每个元素的值都小于zset-max-ziplist-value配置（默认64字节）时，使用ziplist来作为内部编码，否则使用skiplist作为内部编码</p>
+<p>其相当于Java的SortedSet 和 HashMap结合体，内部实现’跳跃表‘ 的数据结构</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>zadd</td>
+<td>添加成员</td>
+<td>key [NX|XX] [CH] [INCR]score member [score member …]<br> [NX|XX] NX: 只有在元素不存在时候添加新元素; XX：更新已经存在的元素，不添加元素<br> CH 返回有序集合元素和分数发生变化的个数  incr 对score做增加，相当于zincrby</td>
+</tr>
+<tr>
+<td>zcard</td>
+<td>计算成员个数</td>
+<td>key</td>
+</tr>
+<tr>
+<td>zscore</td>
+<td>计算某个成员的分数</td>
+<td>key member</td>
+</tr>
+<tr>
+<td>zrank</td>
+<td>计算成员排名,分数从低到高</td>
+<td>key member</td>
+</tr>
+<tr>
+<td>zrevrank</td>
+<td>计算成员排名，分数从高到低</td>
+<td>key member</td>
+</tr>
+<tr>
+<td>zrem</td>
+<td>删除成员</td>
+<td>key member [member …]</td>
+</tr>
+<tr>
+<td>zincrby</td>
+<td>增加成员分数</td>
+<td>key increment member</td>
+</tr>
+<tr>
+<td>zrange<br>zrevrange</td>
+<td>返回指定排名范围的成员</td>
+<td>key start end [withscores] 显示分数</td>
+</tr>
+<tr>
+<td>zrangebyscore<br>zrevrangebyscore</td>
+<td>返回指定分数范围的成员</td>
+<td>key min max [withscores] [limit offset count]<br> key max min [withscores] [limit offset count]<br>min和max 支持开区间（小括号） 和闭区间（中括号），-inf 和 +inf 无限小和无限大士大</td>
+</tr>
+<tr>
+<td>zcount</td>
+<td>返回指定分数范围成员个数</td>
+<td>key min max</td>
+</tr>
+<tr>
+<td>zremrangebyrank</td>
+<td>删除指定排名内的升序元素</td>
+<td>key start end</td>
+</tr>
+<tr>
+<td>zremrangebyscore</td>
+<td>删除指定分数范围的成员</td>
+<td>key min max</td>
+</tr>
+<tr>
+<td>zinterstore</td>
+<td>交集</td>
+<td>destination numkeys key [key …] [weights weight [weight …]] [aggregate sum|min|max]<br> destination 交集计算结果保存到这个键<br> numkeys 需要做交集计算键的个数<br> key[key…] 需要做交集计算的键<br> weights weight[weight…] 每个键的权重，在做交集计算时，每个键中的每个member会将自己分数乘以这个权重，每个键的权重默认为1<br> aggregate sum|min|max  计算成员交集后，分值可以按照sum、min、max 做汇总，默认是sum</td>
+</tr>
+<tr>
+<td>zunionstroe</td>
+<td>并集</td>
+<td>参数同zinterstore</td>
+</tr>
+</tbody></table>
+<p>内部编码表</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g6lnmw7glhj31240u0aou.jpg" alt="e5c2bf73"></p>
+<blockquote>
+<p>键相关命令<br>字符串类型的键，执行set命令会清除过期时间</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>rename</td>
+<td>键重命名</td>
+<td>key newkey<br>如果键已经存在会把value也覆盖，如果不想被覆盖，可以使用renamenx,重名键期间会执行del命令删除旧的键，如果键值比较大，会造成阻塞</td>
+</tr>
+<tr>
+<td>randomkey</td>
+<td>随机返回一个键</td>
+<td></td>
+</tr>
+<tr>
+<td>expire<br>pexpire</td>
+<td>键在seconds秒后过期,后者毫秒</td>
+<td>key seconds</td>
+</tr>
+<tr>
+<td>expireat<br>pexpireat</td>
+<td>键在秒级时间戳后过期，后者毫秒</td>
+<td>key timestamp</td>
+</tr>
+<tr>
+<td>ttl<br>pttl</td>
+<td>查询键剩余过期时间，pttl毫秒级别</td>
+<td>-1 键没有设置过期时间<br> -2 键不存在</td>
+</tr>
+<tr>
+<td>persist</td>
+<td>清除键的过期时间</td>
+<td>key</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>键迁移<br>move key db 用于在Redis内部多数据库之间进行迁移<br>dump+restore 不同的实例之间进行数据迁移<br>migrate host port key|“” destination-db timeout [copy] [replace] [keys key…] 实际上是dump、restore、del是三个命令的组合，具有原子性<br>host 目标redis的Ip地址<br>port 目标redis的端口<br>key|”” 表示迁移多个键<br>destination-db 目标redis数据库索引<br>timeout 迁移的超时时间(毫秒)<br>[copy] 迁移后并不删除源键<br>[replace]  对目标redis的键进行覆盖<br>[keys key…] 需要迁移的键</p>
+</blockquote>
+<blockquote>
+<p>遍历键<br>keys pattern<br>* 代表匹配任意字符<br>. 代表匹配一个字符<br>[] 代表匹配部分字符，如[1,3]匹配1，3 [1-10]匹配1到10任意数字<br>\x用来做转义，如匹配问号需要转义<br>该命令会大数量下会造成阻塞，建议使用scan</p>
+</blockquote>
+<blockquote>
+<p>scan cursor [match pattern] [count number]<br>cursor 必需参数，从0开始的游标<br>match pattern 可选，模式匹配<br>count number 可选，每次要遍历的键个数，默认是10<br>其他类型命令： 哈希hscan 集合sscan 有序集合zscan 用法与scan相同<br>问题：渐进式遍历中，如果有新增或删除键，就可能会没有完整遍历出所有的键</p>
+</blockquote>
+<p>Bitmaps</p>
+<blockquote>
+<p>其并不是一种数据结构，实际上就是字符串，可以对字符串的位进行操作，内部使用二进制存储,在存储超大上亿数据的时候，能节约很多内存空间</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>setbit</td>
+<td>设置值</td>
+<td>key offset value<br>offset 偏移量，可以理解为索引</td>
+</tr>
+<tr>
+<td>getbit</td>
+<td>获取值</td>
+<td>key offset</td>
+</tr>
+<tr>
+<td>bitcount</td>
+<td>获取指定范围值为1的个数</td>
+<td>[start] [end] <br> [start]和[end]代表起始和结束字节数</td>
+</tr>
+<tr>
+<td>bitop</td>
+<td>多个bitmaps操作</td>
+<td>op destkey key[key …]<br>  and(交集)、or(并集)、not(非)、xor（异或）<br> destkey 结果保存的key</td>
+</tr>
+<tr>
+<td>bitpos</td>
+<td>计算第一个值为targetBit的偏移量</td>
+<td>key targetBit [start] [end]</td>
+</tr>
+</tbody></table>
+<p>HyperLogLog</p>
+<blockquote>
+<p>其实际类型是字符串类型，是一种基数算法，可以利用极小的内存空间完成独立总数的统计<br>HyperLogLog内存占用小，但存在一定错误率</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pfadd</td>
+<td>添加</td>
+<td>key element [element …]</td>
+</tr>
+<tr>
+<td>pfcount</td>
+<td>计算独立用户数</td>
+<td>key [key …]</td>
+</tr>
+<tr>
+<td>pfmerge</td>
+<td>合并</td>
+<td>destkey sourcekey [sourcekey …]</td>
+</tr>
+</tbody></table>
+<h5 id="Pipeline"><a href="#Pipeline" class="headerlink" title="Pipeline"></a>Pipeline</h5><p>Pipeline(流水线) 机制能将一组Redis命令进行组装，通过一次RTT传输给Redis,再将这组Redis命令的执行结果按照顺序返回给客户端</p>
+<p>原生批量命令与Pipeline对比：</p>
+<ul>
+<li>原生批量命令是原子的，Pipeline是非原子的</li>
+<li>原生批量命令是一个命令对应多个key,Pipeline支持多个命令</li>
+<li>原生批量命令是Redis服务端支持实现的，而Pipeline需要服务端和客户端共同实现</li>
+</ul>
+<h5 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h5><p>redis 简单事务功能，将一组需要一起执行的命令放到multi和exec两个命令之间。multi命令代表事务开始，exec命令代表事务结束，他们之间的命令是原子顺序执行的。如果要停止事务的执行，用discard命令代替exec命令</p>
+<p>watch 命令 用来确保事务中的key没有被其他客户端修改过，才执行事务，否则不执行（类似乐观锁）</p>
+<h5 id="Lua"><a href="#Lua" class="headerlink" title="Lua"></a>Lua</h5><p>两种方法：</p>
+<ul>
+<li><p>eval<br>eval 脚本内容 key个数 key列表 参数列表</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval <span class="string">'return "helo "..KEYS[1].. ARGV[1]'</span> <span class="number">1</span> redis world</span><br></pre></td></tr></table></figure>
+<p>还可以使用redis-cli –eval 直接执行文件</p>
+</li>
+<li><p>evalsha<br>evalsha 脚本sha1值 key个数 key列表 参数列表<br>将Lua脚本加载到Redis服务端，得到该脚本的SHA1校验和，evalsha使用SHA1作为参数执行对应的Lua脚本，避免每次发送脚本，脚本常驻与内存中</p>
+</li>
+</ul>
+<p>加载脚本到Redis:  redis-cli script load “$(cat ~/lua_test.lua)”</p>
+<h5 id="慢查询分析"><a href="#慢查询分析" class="headerlink" title="慢查询分析"></a>慢查询分析</h5><blockquote>
+<p>配置文件配置: slowlog-log-slower-than 超过多少阈值（微秒，默认10毫秒）；slowlog-max-len 慢日志最大长度<br>命令修改： config set 和  config rewrite（写入配置文件）<br>config set slowlog-log-slower-than 100<br>config set slowlog-max-len</p>
+</blockquote>
+<ul>
+<li><p>获取慢查询日志：<br>慢查询只记录命令执行时间，不包括命令排队和网络传输时间<br>slowlog get [n] n指定条数</p>
+</li>
+<li><p>日志数据结构</p>
+<blockquote>
+<p>3  1) (integer) 3    （id）<br>2) (integer) 1567317373   (发送时间戳)<br>3) (integer) 21  (命令消耗时间)<br>4) 1) “keys”  (命令和参数)<br>2) “*”</p>
+<p>慢查询日志重置：<br>slowlog reset</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="Redis键过期删除策略"><a href="#Redis键过期删除策略" class="headerlink" title="Redis键过期删除策略"></a>Redis键过期删除策略</h5><p>键过期，内部保存在过期字典中，Redis采用惰性删除和定时任务删除机制；<br>惰性删除用于在客户端读取带有超时属性的键时，如果已经超过设置的过期时间，会执行删除并返回空，但这种方式如果键过期，而且一直没有被重新访问，键一直存在<br>定时任务删除：能够解决惰性删除问题，Redis内部维护一个定时任务，每秒运行10次。根据键的过期比例，使用快慢两种速率模式回收键</p>
+<h5 id="Redis高可用方案"><a href="#Redis高可用方案" class="headerlink" title="Redis高可用方案"></a>Redis高可用方案</h5><ol>
+<li><p>主从模式：一主二从<br>配置redis.conf , 从节点配置 slaveof 127.0.0.1 6379<br>确认主从关系： redis-cli -h 127.0.0.1 -p 6379 info replication</p>
+</li>
+<li><p>哨兵模式：<br>配置 redis-sentinel.conf ,sentinel monitor mymaster 127.0.0.1 6379 1<br>最后一位是选举master需要的票数<br>启动哨兵：<br>redis-sentinel redis-sentinel.conf<br>或者 redis-server redis-sentinel.conf –sentinel</p>
+</li>
+<li><p>redis-cluster:<br>每个节点保存数据和整个集群状态，每个节点都和其他节点连接。采用哈希函数把数据映射到一个固定范围的整数集合中，整数定义为槽。所有键根据哈希函数映射到0~16383整数槽内，公式 slot = CRC16(key) &amp; 16383</p>
+</li>
+<li><p>Codis</p>
+<p><a href="https://juejin.im/post/5c132b076fb9a04a08218eef" target="_blank" rel="noopener">https://juejin.im/post/5c132b076fb9a04a08218eef</a></p>
+</li>
+</ol>
+<ul>
+<li>集群限制：</li>
+</ul>
+<ol>
+<li>key批量操作支持限制，目前只支持具有相同slot值的key执行批量操作</li>
+<li>key事务操作支持有限</li>
+<li>key作为数据分区最小粒度，不能将大的键值对象hash、list等映射到不同节点</li>
+<li>只能使用0号数据库</li>
+<li>从节点只能复制主节点，不支持嵌套树状复制结构</li>
+</ol>
+<ul>
+<li>主从复制过程<ol>
+<li>从节点执行slaveof后，从节点保存主节点地址信息</li>
+<li>从节点内部通过每秒运行的定时任务维护复制相关逻辑，当定时任务发现存在新的主节点后，会尝试与该节点建立网络连接</li>
+<li>连接建立成功后，从节点发送ping请求进行首次通信，目的是检测主从之间网络套接字是否可用，主节点当前是否接受处理命令</li>
+<li>如果主节点配置了密码验证，则从节点必须要配置相同的密码才能通过验证，进行复制同步</li>
+<li>通过验证后，主从可正常通信了，主节点会把数据持续发给从节点，同步方式有全量同步和部分同步</li>
+<li>当主节点与从节点同步完当前的数据后，主节点会把后续新增的命令持续发送给从节点进行同步</li>
+</ol>
+</li>
+<li>哨兵模式 最小配置 1主  2从  3哨兵，3个哨兵能监控每个master和salve</li>
+</ul>
+<h5 id="缓存问题"><a href="#缓存问题" class="headerlink" title="缓存问题"></a>缓存问题</h5><ul>
+<li><p>缓存穿透</p>
+<p>  缓存穿透是指，缓存中不存在该key的数据，于是就是去数据库中查询，如果流量一大，就会打趴数据库</p>
+<p>  优化:</p>
+<ol>
+<li><p>缓存空对象</p>
+<p> 对于不存在的数据，依旧将空值缓存起来。但这会造成内存空间的浪费，可以针对这类数据加一个过期时间。对于缓存和存储层数据的一致性，可以在过期的时候，请求存储层，或者通过消息系统更新缓存</p>
+</li>
+<li><p>布隆过滤器</p>
+<p> 将所有存在的数据做成布隆过滤器，可以使用Bitmaps实现，其在大数据量下空间占用小</p>
+<p> Redis4.0以上采用插件集成，<a href="https://github.com/RedisBloom/RedisBloom" target="_blank" rel="noopener">https://github.com/RedisBloom/RedisBloom</a></p>
+<p> 原理：</p>
+<p> 在redis中是一个大型的位数组，通过计算key的hash然后对数组长度取模得到一个位置，进行写入；在判断是否存在时，判断位数组中几个位置是否都为1，只要一个位为0，就说明这个key不存在。布隆过滤器也会存在一定的误判，如果位数组比较稀疏，概率就会很大，否则就会降低。</p>
+</li>
+</ol>
+</li>
+<li><p>缓存雪崩</p>
+<p>  指缓存由于大量请求，造成缓存挂掉，大量请求直接打到存储层，造成存储层挂机</p>
+<p>  优化：</p>
+<ol>
+<li>使用主从，哨兵，集群模式保证缓存高可用</li>
+<li>依赖隔离组件为后端限流并降级</li>
+<li>提前演练，做好后备方案</li>
+</ol>
+</li>
+<li><p>缓存更新方式</p>
+<p>  同步更新，先写入数据库，写入成功后，再更新缓存。</p>
+<p>  异步更新，通过消息中间件进行触发更新。</p>
+<p>  失效更新，在取不到缓存的时候，从数据库取数据，再更新缓存。</p>
+<p>  定时更新，通过定时任务来更新缓存</p>
+</li>
+<li><p>缓存不一致</p>
+<p>  通过增加重试机制，补偿任务，达到最终一致</p>
+</li>
+<li><p>热点key重建</p>
+<p>  优化</p>
+<ol>
+<li>使用互斥锁，只允许一个线程重建缓存</li>
+<li>使用逻辑缓存过期，在value中存一个key过期时间，在获取key的时候通过逻辑时间进行判断</li>
+</ol>
+</li>
+</ul>
+<h5 id="Redis-锁的实现-和-Zookeeper锁实现区别"><a href="#Redis-锁的实现-和-Zookeeper锁实现区别" class="headerlink" title="Redis 锁的实现 和 Zookeeper锁实现区别"></a>Redis 锁的实现 和 Zookeeper锁实现区别</h5><p>Redis 锁 通过 setnx key value 或者 set key value px millseconds nx 当返回1时代表获取到锁，返回0表示获取锁失败，通过Redis的key超时机制来释放锁</p>
+<p>PS： Redis锁可能会在业务逻辑还没执行完的时候就已经超时释放，因此在释放锁的时候，可能其他线程已经重新持有了该锁，所以要在释放锁的时候验证key对应的value值，在创建缓存的时候，value值是随机生成的。</p>
+<p>ZK锁 通过在服务端新建一个临时有序节点，哪个客户端成功创建了第一个临时有序节点，就代表该客户端获得了锁，后面节点的客户端会处于监听状态，当释放锁的时候，服务端就会删除第一个临时节点，此时第二个临时节点能监听到上一个节点的释放事件，这样第二个节点就变成第一个节点，此时客户端2就代表获得了锁。如果客户端的会话关闭，临时节点会被删除，也就释放了锁</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzA4NjA3MTAyMQ==&mid=2649219741&idx=1&sn=e543b333306af62d1ccb8753c3935f61&chksm=87dd011fb0aa8809ade0cb675f6963d606990aab2ac460ff3b27fb8fedb63a7701370518fee6&token=308357506&lang=zh_CN#rd" target="_blank" rel="noopener">《三种分布式锁的优缺点及解决方案》</a></p>
+<h5 id="在某个时间段，某个key变成了热点key，此时请求又都打到了一台slave上，请问该怎么办？"><a href="#在某个时间段，某个key变成了热点key，此时请求又都打到了一台slave上，请问该怎么办？" class="headerlink" title="在某个时间段，某个key变成了热点key，此时请求又都打到了一台slave上，请问该怎么办？"></a>在某个时间段，某个key变成了热点key，此时请求又都打到了一台slave上，请问该怎么办？</h5>
       
 
       
@@ -256,7 +937,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://dxjin.cn/2019/11/06/%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://dxjin.cn/2019/11/13/9.%20Redis/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,18 +951,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/13/7.%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/13/8.%20%E6%95%B0%E6%8D%AE%E5%BA%93/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          7. 数据结构
+          8. 数据库
         
       </div>
     </a>
   
   
-    <a href="/2019/11/02/%E8%BF%99%E6%98%AF%E4%B8%AA%E6%B5%8B%E8%AF%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">这是个测试</div>
+    <a href="/2019/11/13/7.%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">7. 数据结构</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -308,7 +989,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一"><span class="toc-number">1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二"><span class="toc-number">2.</span> <span class="toc-text">方法二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加如下"><span class="toc-number">3.</span> <span class="toc-text">添加如下</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Redis"><span class="toc-number">1.</span> <span class="toc-text">Redis</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Redis-为什么是单线程-为什么单线程还能这么快？"><span class="toc-number">1.1.</span> <span class="toc-text">Redis 为什么是单线程? 为什么单线程还能这么快？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Redis-使用场景"><span class="toc-number">1.2.</span> <span class="toc-text">Redis 使用场景</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Redis-持久化机制"><span class="toc-number">1.3.</span> <span class="toc-text">Redis 持久化机制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Redis-数据类型"><span class="toc-number">1.4.</span> <span class="toc-text">Redis 数据类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Pipeline"><span class="toc-number">1.5.</span> <span class="toc-text">Pipeline</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#事务"><span class="toc-number">1.6.</span> <span class="toc-text">事务</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Lua"><span class="toc-number">1.7.</span> <span class="toc-text">Lua</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#慢查询分析"><span class="toc-number">1.8.</span> <span class="toc-text">慢查询分析</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Redis键过期删除策略"><span class="toc-number">1.9.</span> <span class="toc-text">Redis键过期删除策略</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Redis高可用方案"><span class="toc-number">1.10.</span> <span class="toc-text">Redis高可用方案</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#缓存问题"><span class="toc-number">1.11.</span> <span class="toc-text">缓存问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Redis-锁的实现-和-Zookeeper锁实现区别"><span class="toc-number">1.12.</span> <span class="toc-text">Redis 锁的实现 和 Zookeeper锁实现区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#在某个时间段，某个key变成了热点key，此时请求又都打到了一台slave上，请问该怎么办？"><span class="toc-number">1.13.</span> <span class="toc-text">在某个时间段，某个key变成了热点key，此时请求又都打到了一台slave上，请问该怎么办？</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

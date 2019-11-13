@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://dxjin.cn">
-  <title>博文中添加图片 | 白饭的正确吃法</title>
+  <title>3. 锁 | 白饭的正确吃法</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="方法一（1）在hexo目录下安装插件： 1npm install hexo-asset-image --save  （2）在hexo&#x2F;source目录下创建img文件夹，把图片放置在里面； （3）在xxx.md文件中引用图片： 1![header]( img&#x2F;header.jpg)   方法二(1)在全局配置文件（hexo&#x2F;_config.yml)中将post_asset _folder设置为tr">
+  <meta name="description" content="锁[TOC]  《Java并发编程的艺术》、《Java并发编程之美》  Synchronized原理Synchronized可以修饰普通方法、同步方法块、静态方法；普通方法锁是当前实例对象，静态方法锁是当前类的Class对象，同步方法块锁是Synchonized配置的对象；用的锁是存在对象头里的,根据mark word的锁状态来判断锁，如果锁只被同一个线程持有使用的是偏向锁，不同线程互相交替持有锁">
 <meta name="keywords" content="java,stringboot,springcloud,后端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博文中添加图片">
-<meta property="og:url" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;index.html">
+<meta property="og:title" content="3. 锁">
+<meta property="og:url" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;13&#x2F;3.%20%E9%94%81&#x2F;index.html">
 <meta property="og:site_name" content="白饭的正确吃法">
-<meta property="og:description" content="方法一（1）在hexo目录下安装插件： 1npm install hexo-asset-image --save  （2）在hexo&#x2F;source目录下创建img文件夹，把图片放置在里面； （3）在xxx.md文件中引用图片： 1![header]( img&#x2F;header.jpg)   方法二(1)在全局配置文件（hexo&#x2F;_config.yml)中将post_asset _folder设置为tr">
+<meta property="og:description" content="锁[TOC]  《Java并发编程的艺术》、《Java并发编程之美》  Synchronized原理Synchronized可以修饰普通方法、同步方法块、静态方法；普通方法锁是当前实例对象，静态方法锁是当前类的Class对象，同步方法块锁是Synchonized配置的对象；用的锁是存在对象头里的,根据mark word的锁状态来判断锁，如果锁只被同一个线程持有使用的是偏向锁，不同线程互相交替持有锁">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;img&#x2F;71862163_p0.jpg">
-<meta property="og:updated_time" content="2019-11-06T08:45:32.262Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g89l3xr4v5j30no0b5aad.jpg">
+<meta property="og:updated_time" content="2019-10-26T18:25:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;img&#x2F;71862163_p0.jpg">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g89l3xr4v5j30no0b5aad.jpg">
   
     <link rel="alternative" href="/atom.xml" title="白饭的正确吃法" type="application/atom+xml">
   
@@ -162,42 +162,87 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-博文中添加图片" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-3. 锁" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      博文中添加图片
+      3. 锁
     </h1>
   
 
         
-        <a href="/2019/11/06/%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87/" class="archive-article-date">
-  	<time datetime="2019-11-06T07:57:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
+        <a href="/2019/11/13/3.%20%E9%94%81/" class="archive-article-date">
+  	<time datetime="2019-11-13T14:56:10.950Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>（1）在hexo目录下安装插件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+        <h4 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h4><p>[TOC]</p>
+<blockquote>
+<p>《Java并发编程的艺术》、《Java并发编程之美》</p>
+</blockquote>
+<h5 id="Synchronized原理"><a href="#Synchronized原理" class="headerlink" title="Synchronized原理"></a>Synchronized原理</h5><p>Synchronized可以修饰普通方法、同步方法块、静态方法；<br>普通方法锁是当前实例对象，静态方法锁是当前类的Class对象，同步方法块锁是Synchonized配置的对象；<br>用的锁是存在对象头里的,根据mark word的锁状态来判断锁，如果锁只被同一个线程持有使用的是偏向锁，不同线程互相交替持有锁使用轻量级锁，多线程竞争使用重量级锁。锁会按偏向锁-&gt;轻量级锁-&gt;重量级锁 升级，称为锁膨胀<br> <a href="https://github.com/farmerjohngit/myblog/issues/12" target="_blank" rel="noopener">https://github.com/farmerjohngit/myblog/issues/12</a></p>
+<h5 id="synchronized和Lock的区别"><a href="#synchronized和Lock的区别" class="headerlink" title="synchronized和Lock的区别"></a>synchronized和Lock的区别</h5><ol>
+<li>synchronized 是Java内置关键字，Lock是Java类</li>
+<li>synchronized 无法显式的判断是否获取锁的状态，Lock可以判断是否获取到锁</li>
+<li>synchronized 会自动释放锁，Lock需要在finally中手工释放锁</li>
+<li>synchronized 不同线程获取锁只有一个线程能获取成功，其他线程会一直阻塞直到获取锁，Lock有阻塞锁，也有非阻塞锁，阻塞锁还有尝试设置，功能更强</li>
+<li>synchronized 可重入，不可中断，非公平，Lock锁可重入，可判断，有公平锁，非公平锁</li>
+<li>Lock锁适合大量同步代码的同步问题，synchronized锁适合代码少量的同步问题</li>
+</ol>
+<h5 id="什么是死锁"><a href="#什么是死锁" class="headerlink" title="什么是死锁"></a>什么是死锁</h5><p>两个线程或者两个以上的线程都在等待对方执行完毕才能继续往下执行的时候就发生了死锁，这些线程就陷入了无限等待中</p>
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DeadLock</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Object obj = <span class="keyword">new</span> Object();</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Object obj2 = <span class="keyword">new</span> Object();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        Thread t = <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            System.out.println(<span class="string">"线程1，开始获取obj1锁"</span>);</span><br><span class="line">            <span class="keyword">synchronized</span> (obj) &#123;</span><br><span class="line">                System.out.println(<span class="string">"线程1，获取obj1锁成功"</span>);</span><br><span class="line">                System.out.println(<span class="string">"线程1，开始获取obj2锁"</span>);</span><br><span class="line">                <span class="comment">//休眠让两个线程都获取到对应的锁</span></span><br><span class="line">                sleep(<span class="number">1</span>);</span><br><span class="line">                <span class="keyword">synchronized</span> (obj2) &#123;</span><br><span class="line">                    System.out.println(<span class="string">"线程1，获取obj2锁成功"</span>);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        t.start();</span><br><span class="line"></span><br><span class="line">        Thread t2 = <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            System.out.println(<span class="string">"线程2，开始获取obj2锁"</span>);</span><br><span class="line">            <span class="keyword">synchronized</span> (obj2) &#123;</span><br><span class="line">                System.out.println(<span class="string">"线程2，获取obj2锁成功"</span>);</span><br><span class="line">                System.out.println(<span class="string">"线程2，开始获取obj1锁"</span>);</span><br><span class="line">                sleep(<span class="number">1</span>);</span><br><span class="line">                <span class="keyword">synchronized</span> (obj) &#123;</span><br><span class="line">                    System.out.println(<span class="string">"线程2，获取obj1锁成功"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        t2.start();</span><br><span class="line">        t2.join();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sleep</span><span class="params">(<span class="keyword">long</span> second)</span></span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.sleep(second * <span class="number">1000</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>（2）在hexo/source目录下创建img文件夹，把图片放置在里面；</p>
-<p>（3）在xxx.md文件中引用图片：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![header]( img/header.jpg)</span><br></pre></td></tr></table></figure>
 
 
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>(1)在全局配置文件（hexo/_config.yml)中将post_asset _folder设置为true；</p>
-<p>(2)创建文章（在创建的时候，会在hexo/source/_post目录下，生成一个XXX.md文件和一个XXX的文件夹）:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"XXX"</span></span><br></pre></td></tr></table></figure>
-<p>(3)把XXX这个博文需要展示的图片放在XXX文件夹目录下；</p>
-<p>(4)在XXX.md文件中引入图片的方式：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img example.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="如何-避免死锁"><a href="#如何-避免死锁" class="headerlink" title="如何 避免死锁"></a>如何 避免死锁</h5><ol>
+<li><p>使线程按照指定的顺序获取锁，并释放锁</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Thread 1:</span><br><span class="line">  lock A </span><br><span class="line">  lock B</span><br><span class="line"></span><br><span class="line">Thread 2:</span><br><span class="line">   wait for A</span><br><span class="line">   lock C (when A locked)</span><br><span class="line"></span><br><span class="line">Thread 3:</span><br><span class="line">   wait for A</span><br><span class="line">   wait for B</span><br><span class="line">   wait for C</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置获取锁超时时间，超过时间，自动放弃获取锁，并释放已经持有的锁，使用lock.tryLock(timeount)代替synchronized</p>
+</li>
+<li><p>避免一个线程同时获取多个锁</p>
+</li>
+</ol>
+<h5 id="什么是活锁"><a href="#什么是活锁" class="headerlink" title="什么是活锁"></a>什么是活锁</h5><p>活锁也是一种死锁，死锁的话，所有线程都处于阻塞状态，活锁是由于某些条件没有满足，导致一直重复尝试，但有可能自行解开，比如设置了重试次数限制，或者超时时间</p>
+<h5 id="sleep-和-wait的区别"><a href="#sleep-和-wait的区别" class="headerlink" title="sleep 和 wait的区别"></a>sleep 和 wait的区别</h5><p>sleep：</p>
+<ul>
+<li>让当前线程休眠指定时间</li>
+<li>不释放锁资源</li>
+<li>可通过调用interrupt()方法来唤醒休眠线程</li>
+</ul>
+<p>wait：</p>
+<ul>
+<li>让当前线程进入等待状态，当其他线程调用notify或者notifyAll方法时，当前线程进入就绪状态</li>
+<li>当前线程会释放已获取的锁资源，并进入等待队列</li>
+</ul>
+<h5 id="synchronized-可重入是怎么实现的"><a href="#synchronized-可重入是怎么实现的" class="headerlink" title="synchronized 可重入是怎么实现的"></a>synchronized 可重入是怎么实现的</h5><p>可重入是指：当一个线程持有一个锁对象之后，再次去获取同一个锁时能够成功获取。</p>
+<p>因为synchronized使用的是锁对象，当某个线程第一次持有锁后，会修改锁对象的mark word锁状态为偏向锁，偏向锁锁会在当前线程的栈帧中建立一个锁记录空间，mark word会将指针指向栈中的锁记录。当线程再次获取锁对象的时候，会检查mark word 中的指针是否指向当前线程的栈帧，如果是就直接获取锁，如果不是就需要竞争</p>
+<h5 id="ReentrantLock可重入性怎么实现的？"><a href="#ReentrantLock可重入性怎么实现的？" class="headerlink" title="ReentrantLock可重入性怎么实现的？"></a>ReentrantLock可重入性怎么实现的？</h5><p>由于ReentrantLock是通过AQS来实现的，其使用了AQS的state状态值来表示线程获取该锁的可重入次数，默认情况下state为0表示当前锁没有被任何线程持有，当一个线程获取该锁时会尝试使用CAS设置state值为1，如果CAS设置成功则当前线程获取了该锁，然后记录该锁的持有者为当前线程，在该线程没有释放锁的情况下第二次获取该锁后，状态值被设置2，这就是可以重入次数，在释放锁的时候，需要通过CAS将状态值减1，直到状态值为0，表示当前线程释放该锁</p>
+<h5 id="非公平锁和公平锁在ReetrantLock里的实现过程是怎样的"><a href="#非公平锁和公平锁在ReetrantLock里的实现过程是怎样的" class="headerlink" title="非公平锁和公平锁在ReetrantLock里的实现过程是怎样的"></a>非公平锁和公平锁在ReetrantLock里的实现过程是怎样的</h5><p>如果一个锁是公平的，那么锁的获取顺序就应该符合请求的绝对时间顺序，FIFO。</p>
+<p>对于非公平锁，只要CAS设置同步状态成功，则表示当前线程获取了锁，而公平锁还需要判断当前节点是否有前驱节点，如果有，则表示有线程比当前线程更早请求获取锁，因此需要等待前驱线程获取并释放锁之后才能继续获取锁。</p>
+<h5 id="自旋锁、自适应自旋、锁消除、锁粗化、轻量级锁、偏向锁"><a href="#自旋锁、自适应自旋、锁消除、锁粗化、轻量级锁、偏向锁" class="headerlink" title="自旋锁、自适应自旋、锁消除、锁粗化、轻量级锁、偏向锁"></a>自旋锁、自适应自旋、锁消除、锁粗化、轻量级锁、偏向锁</h5><p>自旋锁：开启线程执行一个忙循环，直到需要更新的值为期待值为止<br>自适应自旋：自旋时间不再固定，由前一次在同一个锁上的自旋时间及锁的拥有者状态来决定，比如在同一个锁对象上，自旋等待刚刚成功获得过锁，并且持有锁的线程正在运行中，那么虚拟机就会认为这次自旋也很有可能再次成功，进而它将自旋等待更长时间，如果很少成功获得过锁，那很可能会忽略掉自旋过程，以避免CPU资源浪费。<br>锁消除：JIT在运行时，对一些代码上要求同步，但是被检测到不可能存在共享数据竞争的锁进行消除<br>锁粗化：如果虚拟机探测到有一串零碎的操作都对同一个对象加锁，将会把加锁同步的范围扩展到整个序列的外部<br>轻量级锁：加锁是通过同步对象的对象头进行操作的，首先会在当前线程的栈帧中建立一个名为锁记录的空间，存储锁对象目前的Mark Word拷贝，会加Displaced前缀，然后通过CAS尝试将对象的Mark Word更新为指向Lock Record的指针，如果成功，就获得了该对象的锁，如果失败，会检查Mark Word是否指向当前线程的栈帧，如果是就说明已经获得了锁，如果没有就说明有其他线程抢占，轻量锁就会膨胀成重量级锁；解锁也是通过CAS来操作，就是将Mark Word 替换为原来的值<br>偏向锁：锁偏向于第一个获得它的线程，如果在接下来的执行过程中，该锁没有被其他的线程获取，则持有偏向锁的线程将永远不需要再同步。-XX:+UseBiasedLocking 开启偏向锁</p>
+<h5 id="公平锁、非公平锁"><a href="#公平锁、非公平锁" class="headerlink" title="公平锁、非公平锁"></a>公平锁、非公平锁</h5><p>公平锁：根据线程请求锁的顺序来获取锁<br>非公平锁：抢占式获取锁</p>
+<h5 id="AbstractQueuedSynchronizer的作用"><a href="#AbstractQueuedSynchronizer的作用" class="headerlink" title="AbstractQueuedSynchronizer的作用"></a>AbstractQueuedSynchronizer的作用</h5><p>抽象同步队列简称AQS,是实现同步器的基础组件，并发包中的锁都是基于其实现的，关键是先进先出的队列，state状态，并且定义了 ConditionObject ,拥有两种线程模式，独占模式和共享模式</p>
+<ul>
+<li><p>AQS核心思想</p>
+<p>  如果被请求的共享资源空闲，则将当前请求资源的线程设置为有效的工作线程，并且将共享资源设置为锁定状态。如果被请求的共享资源被占用，那么就需要一套线程阻塞等待以及被唤醒时锁分配的机制，这个机制使用CLH队列实现的，即将暂时获取不到锁的线程加入到队列中</p>
+<blockquote>
+<p>CLH(Craig,Landin,and Hagersten)队列是一个虚拟的双向队列（虚拟的双向队列即不存在队列实例，仅存在结点之间的关联关系）。AQS是将每条请求共享资源的线程封装成一个CLH锁队列的一个结点（Node）来实现锁的分配, 并保持了上下节点，当前请求资源的线程</p>
+</blockquote>
+</li>
+</ul>
+<img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g89l3xr4v5j30no0b5aad.jpg" alt="AQS原理图" style="zoom: 67%;" />
 
-<h3 id="添加如下"><a href="#添加如下" class="headerlink" title="添加如下"></a>添加如下</h3><p><img src="img/71862163_p0.jpg" alt="header"></p>
+
+
+<h5 id="JDK8新增的锁"><a href="#JDK8新增的锁" class="headerlink" title="JDK8新增的锁"></a>JDK8新增的锁</h5><p>StampedLock 提供了三种模式的读写控制，当调用获取锁的系列函数时，会返回一个long型变量，支持在一定条件下三种模式的相互转换<br>写锁writeLock: 一个排它锁或者独占锁，并且写锁不可重入<br>悲观读锁readLock: 共享锁，在没有线程独占获取写锁的情况下，多个线程可以同时获取该锁，如果已经有其他线程持有写锁，则其他线程请求读锁会被阻塞<br>乐观读锁tryOptimisticRead: 在操作数据前并没有通过CAS设置锁的状态，仅通过位运算测试</p>
 
       
 
@@ -256,7 +301,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://dxjin.cn/2019/11/06/%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://dxjin.cn/2019/11/13/3.%20%E9%94%81/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,18 +315,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/13/7.%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/13/2.%20Java%E5%B9%B6%E5%8F%91/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          7. 数据结构
+          2. Java并发
         
       </div>
     </a>
   
   
-    <a href="/2019/11/02/%E8%BF%99%E6%98%AF%E4%B8%AA%E6%B5%8B%E8%AF%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">这是个测试</div>
+    <a href="/2019/11/13/19.%20%E5%88%86%E5%B8%83%E5%BC%8F%E3%80%81%E5%BE%AE%E6%9C%8D%E5%8A%A1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">19. 分布式、微服务</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -308,7 +353,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一"><span class="toc-number">1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二"><span class="toc-number">2.</span> <span class="toc-text">方法二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加如下"><span class="toc-number">3.</span> <span class="toc-text">添加如下</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#锁"><span class="toc-number">1.</span> <span class="toc-text">锁</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Synchronized原理"><span class="toc-number">1.1.</span> <span class="toc-text">Synchronized原理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#synchronized和Lock的区别"><span class="toc-number">1.2.</span> <span class="toc-text">synchronized和Lock的区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#什么是死锁"><span class="toc-number">1.3.</span> <span class="toc-text">什么是死锁</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#如何-避免死锁"><span class="toc-number">1.4.</span> <span class="toc-text">如何 避免死锁</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#什么是活锁"><span class="toc-number">1.5.</span> <span class="toc-text">什么是活锁</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#sleep-和-wait的区别"><span class="toc-number">1.6.</span> <span class="toc-text">sleep 和 wait的区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#synchronized-可重入是怎么实现的"><span class="toc-number">1.7.</span> <span class="toc-text">synchronized 可重入是怎么实现的</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ReentrantLock可重入性怎么实现的？"><span class="toc-number">1.8.</span> <span class="toc-text">ReentrantLock可重入性怎么实现的？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#非公平锁和公平锁在ReetrantLock里的实现过程是怎样的"><span class="toc-number">1.9.</span> <span class="toc-text">非公平锁和公平锁在ReetrantLock里的实现过程是怎样的</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#自旋锁、自适应自旋、锁消除、锁粗化、轻量级锁、偏向锁"><span class="toc-number">1.10.</span> <span class="toc-text">自旋锁、自适应自旋、锁消除、锁粗化、轻量级锁、偏向锁</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#公平锁、非公平锁"><span class="toc-number">1.11.</span> <span class="toc-text">公平锁、非公平锁</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#AbstractQueuedSynchronizer的作用"><span class="toc-number">1.12.</span> <span class="toc-text">AbstractQueuedSynchronizer的作用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JDK8新增的锁"><span class="toc-number">1.13.</span> <span class="toc-text">JDK8新增的锁</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

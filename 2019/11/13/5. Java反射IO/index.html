@@ -6,20 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://dxjin.cn">
-  <title>博文中添加图片 | 白饭的正确吃法</title>
+  <title>5. Java反射IO | 白饭的正确吃法</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="方法一（1）在hexo目录下安装插件： 1npm install hexo-asset-image --save  （2）在hexo&#x2F;source目录下创建img文件夹，把图片放置在里面； （3）在xxx.md文件中引用图片： 1![header]( img&#x2F;header.jpg)   方法二(1)在全局配置文件（hexo&#x2F;_config.yml)中将post_asset _folder设置为tr">
+  <meta name="description" content="Java 反射、IO反射Class类： 反射的核心类、可以获取类的属性，方法等信息Field类： Java.lang.reflec包中的类，表示类的成员变量，可以用来获取和设置类之中的属性值Method类：Java.lang.reflec包中的类，表示类的方法，可以用来获取类中的方法信息或者执行方法Constructor类：Java.lang.reflec包中的类，表示类的构造方法   获取Cla">
 <meta name="keywords" content="java,stringboot,springcloud,后端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博文中添加图片">
-<meta property="og:url" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;index.html">
+<meta property="og:title" content="5. Java反射IO">
+<meta property="og:url" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;13&#x2F;5.%20Java%E5%8F%8D%E5%B0%84IO&#x2F;index.html">
 <meta property="og:site_name" content="白饭的正确吃法">
-<meta property="og:description" content="方法一（1）在hexo目录下安装插件： 1npm install hexo-asset-image --save  （2）在hexo&#x2F;source目录下创建img文件夹，把图片放置在里面； （3）在xxx.md文件中引用图片： 1![header]( img&#x2F;header.jpg)   方法二(1)在全局配置文件（hexo&#x2F;_config.yml)中将post_asset _folder设置为tr">
+<meta property="og:description" content="Java 反射、IO反射Class类： 反射的核心类、可以获取类的属性，方法等信息Field类： Java.lang.reflec包中的类，表示类的成员变量，可以用来获取和设置类之中的属性值Method类：Java.lang.reflec包中的类，表示类的方法，可以用来获取类中的方法信息或者执行方法Constructor类：Java.lang.reflec包中的类，表示类的构造方法   获取Cla">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;img&#x2F;71862163_p0.jpg">
-<meta property="og:updated_time" content="2019-11-06T08:45:32.262Z">
+<meta property="og:updated_time" content="2019-10-26T18:25:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;img&#x2F;71862163_p0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="白饭的正确吃法" type="application/atom+xml">
   
@@ -162,43 +160,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-博文中添加图片" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-5. Java反射IO" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      博文中添加图片
+      5. Java反射IO
     </h1>
   
 
         
-        <a href="/2019/11/06/%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87/" class="archive-article-date">
-  	<time datetime="2019-11-06T07:57:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
+        <a href="/2019/11/13/5.%20Java%E5%8F%8D%E5%B0%84IO/" class="archive-article-date">
+  	<time datetime="2019-11-13T14:56:10.966Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>（1）在hexo目录下安装插件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-
-<p>（2）在hexo/source目录下创建img文件夹，把图片放置在里面；</p>
-<p>（3）在xxx.md文件中引用图片：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![header]( img/header.jpg)</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>(1)在全局配置文件（hexo/_config.yml)中将post_asset _folder设置为true；</p>
-<p>(2)创建文章（在创建的时候，会在hexo/source/_post目录下，生成一个XXX.md文件和一个XXX的文件夹）:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"XXX"</span></span><br></pre></td></tr></table></figure>
-<p>(3)把XXX这个博文需要展示的图片放在XXX文件夹目录下；</p>
-<p>(4)在XXX.md文件中引入图片的方式：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img example.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="添加如下"><a href="#添加如下" class="headerlink" title="添加如下"></a>添加如下</h3><p><img src="img/71862163_p0.jpg" alt="header"></p>
-
+        <h4 id="Java-反射、IO"><a href="#Java-反射、IO" class="headerlink" title="Java 反射、IO"></a>Java 反射、IO</h4><h5 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h5><p>Class类： 反射的核心类、可以获取类的属性，方法等信息<br>Field类： Java.lang.reflec包中的类，表示类的成员变量，可以用来获取和设置类之中的属性值<br>Method类：Java.lang.reflec包中的类，表示类的方法，可以用来获取类中的方法信息或者执行方法<br>Constructor类：Java.lang.reflec包中的类，表示类的构造方法  </p>
+<p>获取Class对象的3种方法：  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1</span></span><br><span class="line">Person p = <span class="keyword">new</span> Person();</span><br><span class="line">Class clazz = p.getClass;</span><br><span class="line"></span><br><span class="line"><span class="comment">//2</span></span><br><span class="line">Class clazz = Person<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//3</span></span><br><span class="line">Class clazz = Class.forName(<span class="string">"类的全路径"</span>);</span><br></pre></td></tr></table></figure>
+<p>创建对象的两种方法<br>1.使用Class对象的newInstance()，这种方法需要Class对象对应的类有默认的空构造器<br>2.调用Constructor对象的newInstance(),先通过Class对象获取构造器对象，再通过构造器对象的newInstance()创建</p>
+<h5 id="请说明如何通过反射获取和设置对象私有字段的值？"><a href="#请说明如何通过反射获取和设置对象私有字段的值？" class="headerlink" title="请说明如何通过反射获取和设置对象私有字段的值？"></a>请说明如何通过反射获取和设置对象私有字段的值？</h5><p>通过类对象的getDeclaredField()方法获取字段对象，然后通过字段对象的setAccessible(true)将其设置为可以访问，接下来就可以通过Class对象的getMethod方法获取get/set方法来获取/设置字段的值</p>
+<h5 id="BIO、NIO区别"><a href="#BIO、NIO区别" class="headerlink" title="BIO、NIO区别"></a>BIO、NIO区别</h5><p>BIO(Block IO): jkd1.4以前的IO模型，它是一种阻塞IO<br>NIO（NoN-Block IO）：JDK1.4以后才有的IO模型，提高了程序的性能，借鉴比较先进的设计思想，linux多路复用技术，轮询机制<br>AIO（Asynchronous IO）:JDK1.7以后才有的IO模型，相当于NIO2，相当于NIO2，学习Linux epoll模式  </p>
+<p>linux epoll介绍：<a href="https://mp.weixin.qq.com/s/YUMmIjJzhudrKb8WHcJ49Q" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/YUMmIjJzhudrKb8WHcJ49Q</a></p>
+<h5 id="Java-NIO的原理"><a href="#Java-NIO的原理" class="headerlink" title="Java NIO的原理"></a>Java NIO的原理</h5><p>1.多路复用技术：建立连接—发送数据—服务端处理—反馈<br>2.轮询机制（Select模式）<br>3.SelectionKey: 牌号，时间的标识，唯一的身份标识<br>4.Buffer(数据缓冲区)  </p>
+<p>Channel实现：FileChannel(文件IO)、DatagramChannel（UDP）、SocketChannel（Client）、ServerSocketChannel（Server）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//实例</span></span><br><span class="line"><span class="keyword">try</span>(ServerSocketChannel serverSocketChannel = ServerSocketChannel.open()) &#123;</span><br><span class="line">            serverSocketChannel.socket().bind(<span class="keyword">new</span> InetSocketAddress(<span class="number">3388</span>));</span><br><span class="line"></span><br><span class="line">            Selector selector = Selector.open();</span><br><span class="line">            serverSocketChannel.configureBlocking(<span class="keyword">false</span>);</span><br><span class="line">            serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);</span><br><span class="line">            System.out.println(<span class="string">"服务器准备就绪，开始监听，端口3388"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                <span class="keyword">int</span> wait = selector.select();</span><br><span class="line">                <span class="keyword">if</span> (wait == <span class="number">0</span>)</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">                Set&lt;SelectionKey&gt; keys = selector.selectedKeys();</span><br><span class="line">                Iterator&lt;SelectionKey&gt; iterator = keys.iterator();</span><br><span class="line">                ByteBuffer byteBuffer = ByteBuffer.allocate(<span class="number">1024</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">                    SelectionKey key = iterator.next();</span><br><span class="line">                    <span class="keyword">if</span> (key.isAcceptable()) &#123;</span><br><span class="line">                        <span class="comment">//do something</span></span><br><span class="line">                    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (key.isReadable()) &#123;</span><br><span class="line">                        <span class="comment">//do something</span></span><br><span class="line">                    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (key.isWritable()) &#123;</span><br><span class="line">                        <span class="comment">//do something</span></span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    iterator.remove();</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -256,7 +247,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://dxjin.cn/2019/11/06/%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://dxjin.cn/2019/11/13/5.%20Java%E5%8F%8D%E5%B0%84IO/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,18 +261,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/13/7.%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/13/4.%20JVM%E7%9F%A5%E8%AF%86/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          7. 数据结构
+          4. JVM知识
         
       </div>
     </a>
   
   
-    <a href="/2019/11/02/%E8%BF%99%E6%98%AF%E4%B8%AA%E6%B5%8B%E8%AF%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">这是个测试</div>
+    <a href="/2019/11/13/6.%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">6. 设计模式</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -308,7 +299,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一"><span class="toc-number">1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二"><span class="toc-number">2.</span> <span class="toc-text">方法二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加如下"><span class="toc-number">3.</span> <span class="toc-text">添加如下</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-反射、IO"><span class="toc-number">1.</span> <span class="toc-text">Java 反射、IO</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#反射"><span class="toc-number">1.1.</span> <span class="toc-text">反射</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#请说明如何通过反射获取和设置对象私有字段的值？"><span class="toc-number">1.2.</span> <span class="toc-text">请说明如何通过反射获取和设置对象私有字段的值？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#BIO、NIO区别"><span class="toc-number">1.3.</span> <span class="toc-text">BIO、NIO区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Java-NIO的原理"><span class="toc-number">1.4.</span> <span class="toc-text">Java NIO的原理</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

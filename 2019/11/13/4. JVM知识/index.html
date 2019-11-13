@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://dxjin.cn">
-  <title>博文中添加图片 | 白饭的正确吃法</title>
+  <title>4. JVM知识 | 白饭的正确吃法</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="方法一（1）在hexo目录下安装插件： 1npm install hexo-asset-image --save  （2）在hexo&#x2F;source目录下创建img文件夹，把图片放置在里面； （3）在xxx.md文件中引用图片： 1![header]( img&#x2F;header.jpg)   方法二(1)在全局配置文件（hexo&#x2F;_config.yml)中将post_asset _folder设置为tr">
+  <meta name="description" content="JVM知识[TOC]  《深入理解Java虚拟机：JVM高级特性与最佳实践（最新第二版）》  JVM运行时内存区域划分  线程独享区域：程序计数器，本地方法栈，虚拟机栈线程共享区域：元空间(&amp;lt;=1.7方法区), 堆   程序计数器：线程私有，是一块较小的内存空间，可以看做是当前线程执行的字节码指示器，也是唯一的没有定义OOM的区块本地方法栈： 用于执行Native 方法时使用虚拟机栈：用于存">
 <meta name="keywords" content="java,stringboot,springcloud,后端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博文中添加图片">
-<meta property="og:url" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;index.html">
+<meta property="og:title" content="4. JVM知识">
+<meta property="og:url" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;13&#x2F;4.%20JVM%E7%9F%A5%E8%AF%86&#x2F;index.html">
 <meta property="og:site_name" content="白饭的正确吃法">
-<meta property="og:description" content="方法一（1）在hexo目录下安装插件： 1npm install hexo-asset-image --save  （2）在hexo&#x2F;source目录下创建img文件夹，把图片放置在里面； （3）在xxx.md文件中引用图片： 1![header]( img&#x2F;header.jpg)   方法二(1)在全局配置文件（hexo&#x2F;_config.yml)中将post_asset _folder设置为tr">
+<meta property="og:description" content="JVM知识[TOC]  《深入理解Java虚拟机：JVM高级特性与最佳实践（最新第二版）》  JVM运行时内存区域划分  线程独享区域：程序计数器，本地方法栈，虚拟机栈线程共享区域：元空间(&amp;lt;=1.7方法区), 堆   程序计数器：线程私有，是一块较小的内存空间，可以看做是当前线程执行的字节码指示器，也是唯一的没有定义OOM的区块本地方法栈： 用于执行Native 方法时使用虚拟机栈：用于存">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;img&#x2F;71862163_p0.jpg">
-<meta property="og:updated_time" content="2019-11-06T08:45:32.262Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g78qk7u7ejj30ly0feq50.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;Users&#x2F;chenjujun&#x2F;Library&#x2F;Application%20Support&#x2F;typora-user-images&#x2F;image-20191008191348602.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20150928113651917?watermark&#x2F;2&#x2F;text&#x2F;aHR0cDovL2Jsb2cuY3Nkbi5uZXQv&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA==&#x2F;dissolve&#x2F;70&#x2F;gravity&#x2F;Center">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g7r28u0oyxj30m109ijvg.jpg">
+<meta property="og:updated_time" content="2019-10-26T18:25:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;img&#x2F;71862163_p0.jpg">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g78qk7u7ejj30ly0feq50.jpg">
   
     <link rel="alternative" href="/atom.xml" title="白饭的正确吃法" type="application/atom+xml">
   
@@ -162,42 +165,157 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-博文中添加图片" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-4. JVM知识" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      博文中添加图片
+      4. JVM知识
     </h1>
   
 
         
-        <a href="/2019/11/06/%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87/" class="archive-article-date">
-  	<time datetime="2019-11-06T07:57:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
+        <a href="/2019/11/13/4.%20JVM%E7%9F%A5%E8%AF%86/" class="archive-article-date">
+  	<time datetime="2019-11-13T14:56:10.966Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>（1）在hexo目录下安装插件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+        <h4 id="JVM知识"><a href="#JVM知识" class="headerlink" title="JVM知识"></a>JVM知识</h4><p>[TOC]</p>
+<blockquote>
+<p>《深入理解Java虚拟机：JVM高级特性与最佳实践（最新第二版）》</p>
+</blockquote>
+<h5 id="JVM运行时内存区域划分"><a href="#JVM运行时内存区域划分" class="headerlink" title="JVM运行时内存区域划分"></a>JVM运行时内存区域划分</h5><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g78qk7u7ejj30ly0feq50.jpg" alt="image-20190922235827314" style="zoom: 50%;" />
 
-<p>（2）在hexo/source目录下创建img文件夹，把图片放置在里面；</p>
-<p>（3）在xxx.md文件中引用图片：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![header]( img/header.jpg)</span><br></pre></td></tr></table></figure>
+<p>线程独享区域：程序计数器，本地方法栈，虚拟机栈<br>线程共享区域：元空间(&lt;=1.7方法区), 堆  </p>
+<p>程序计数器：线程私有，是一块较小的内存空间，可以看做是当前线程执行的字节码指示器，也是唯一的没有定义OOM的区块<br>本地方法栈： 用于执行Native 方法时使用<br>虚拟机栈：用于存储局部变量，操作数栈，动态链接，方法出口等信息<br>元空间(方法区)：存储已被虚拟机加载的类信息，常量，静态变量，即时编译器编译后的代码等数据<br>堆：存储对象实例</p>
+<h5 id="OOM-及SOE的示例、原因，排查方法"><a href="#OOM-及SOE的示例、原因，排查方法" class="headerlink" title="OOM,及SOE的示例、原因，排查方法"></a>OOM,及SOE的示例、原因，排查方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//OOM -Xmx20m -Xms20m -XX:+HeapDumpOnOutOfMemoryError</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OOMTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;Object&gt; objList = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>) &#123;</span><br><span class="line">            objList.add(<span class="keyword">new</span> Object());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//SOE栈异常 -Xss125k</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> class <span class="title">SOETest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            stackMethod();</span><br><span class="line">        &#125; <span class="keyword">catch</span>(Error err) &#123;</span><br><span class="line">            err.printStackTrace();</span><br><span class="line">            System.out.println(<span class="string">"执行count="</span> + count);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">stackMethod</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        count ++;</span><br><span class="line">        stackMethod();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>OOM排查：如果能看到日志，可以从打印的日志中获取到发送异常的代码行，再去代码中查找具体哪块的代码有问题。如果没有记录日志，通过设置的 -XX:+HeapDumpOnOutOfMemoryError 在发生OOM的时候生成.hprof文件，再导入JProfiler能够看到是由于哪个对象造成的OOM，再通过这个对象去代码中寻找</li>
+<li>SOE排查：栈的深度一般为1000-2000深度,超过了深度或者超过了栈大小就会导致SOE，通过打印的日志定位错误代码位置，检测是否有无限递归，发生了死循环等情况，修改代码</li>
+</ul>
+<h5 id="如何判断对象可以回收或存活"><a href="#如何判断对象可以回收或存活" class="headerlink" title="如何判断对象可以回收或存活"></a>如何判断对象可以回收或存活</h5><p>判断是否可以回收，或者存活主要是看：  </p>
+<ol>
+<li>堆中是否存在该实例</li>
+<li>加载该类的classloader是否已经被回收 </li>
+<li>该类的java.lang.Class对象在任何地方没有被引用，也就是不能够通过反射方法获取该类信息</li>
+</ol>
+<h5 id="哪些对象可以作为GC-ROOT-对象"><a href="#哪些对象可以作为GC-ROOT-对象" class="headerlink" title="哪些对象可以作为GC ROOT 对象"></a>哪些对象可以作为GC ROOT 对象</h5><ol>
+<li>虚拟机栈(栈帧中的本地变量表)中引用的对象</li>
+<li>本地方法中JNI引用的对象</li>
+<li>方法区中的静态变量和常量引用的对象</li>
+</ol>
+<h5 id="常见的GC算法"><a href="#常见的GC算法" class="headerlink" title="常见的GC算法"></a>常见的GC算法</h5><ol>
+<li>标记-清除算法：先标记出需要回收的对象，再清除这些被标记了的对象，缺点是：标记清除过程效率不高；会产生内存碎片  </li>
+<li>复制算法：将内存划分成同等大小两块，只使用其中一块内存，当这一块的内存快用完后，将已存活的对象复制到另外一块内存，再对已使用的内存空间进行一次清理</li>
+<li>标记-整理算法：标记出已存活的对象，将对象移动到内存一端，再对端以外的内存进行清理回收</li>
+<li>分代收集算法：年轻代使用复制算法,永久代使用 标记-清除或者标记-整理算法</li>
+</ol>
+<h5 id="常见的JVM性能监测分析工具"><a href="#常见的JVM性能监测分析工具" class="headerlink" title="常见的JVM性能监测分析工具"></a>常见的JVM性能监测分析工具</h5><ol>
+<li>jps<br> 能够查看正在运行的虚拟机进程，并显示虚拟机的执行主类及进程ID</li>
+<li>jstat [option vmid [interval[s|ms] [count]] ]<br> 可以显示本地或者远程虚拟机中的类装载、内存、垃圾收集、JIT编译等运行数据</li>
+<li>jinfo<br> 实时查看和调整虚拟机的各项参数</li>
+<li>jmap<br> 生成堆转储快照</li>
+<li>jstack<br> 用于生成虚拟机当前时刻的线程快照<ol start="6">
+<li>查看当前JVM使用的垃圾收集器：java -XX:+PrintFlagFinal -version  或者 java -XX:+PrintCommandLineFlags -version </li>
+</ol>
+</li>
+</ol>
+<h5 id="JVM优化"><a href="#JVM优化" class="headerlink" title="JVM优化"></a>JVM优化</h5><ol>
+<li>响应时间优先：年轻代设的大些，直到接近系统的最低响应时间限制。年轻代设大，可以减少到达年老代的对象。对于永久代的设置需要参考：永久代并发收集的次数、年轻代和永久代回收时间比例，调整达到一个合适的值</li>
+<li>吞吐量优先：年轻代设的大些，永久代较小</li>
+</ol>
+<h5 id="什么时候会触发FullGC"><a href="#什么时候会触发FullGC" class="headerlink" title="什么时候会触发FullGC"></a>什么时候会触发FullGC</h5><ol>
+<li>永久代空间不足  </li>
+<li>手动调用触发gc</li>
+</ol>
+<h5 id="类加载器有几种"><a href="#类加载器有几种" class="headerlink" title="类加载器有几种"></a>类加载器有几种</h5><ol>
+<li>Bootstrap ClassLoader<br> 负责加载JDK自带的rt.jar包中的类文件，它是所有类加载器的父加载器，Bootstrap ClassLoader没有任何父类加载器。</li>
+<li>Extension ClassLoader负责加载Java的扩展类库，也就是从jre/lib/ext目录下或者java.ext.dirs系统属性指定的目录下加载类。  </li>
+<li>System ClassLoader负责从classpath环境变量中加载类文件，classpath环境变量通常由”-classpath” 或 “-cp” 命令行选项来定义，或是由 jar中 Mainfest文件的classpath属性指定，System ClassLoader是Extension ClassLoader的子加载器</li>
+<li>自定义加载器</li>
+</ol>
+<h5 id="什么是双亲委派模型？双亲委派模型的破坏"><a href="#什么是双亲委派模型？双亲委派模型的破坏" class="headerlink" title="什么是双亲委派模型？双亲委派模型的破坏"></a>什么是双亲委派模型？双亲委派模型的破坏</h5><p> 一个类在加载的时候，首先会将加载请求委派给父加载器，只有当父加载器反馈无法加载完成这个请求时，子加载器才会尝试自己加载<br> 双亲委派模型的破坏指的是不按照双亲委派模型来加载类，比如JNDI，它的代码由启动类加载器加载,但JDNI需要调用部署在ClassPath的JNDI接口，但启动类加载器是不知道这些代码的，所以就有了线程上下文类加载器(Thread Context ClassLoader)，可以通过java.lang.Thread类setContextClassLoader设置类加载器，通过这个加载器父加载器就可以请求子类加载器完成类加载的动作。</p>
+<h5 id="类的生命周期"><a href="#类的生命周期" class="headerlink" title="类的生命周期"></a>类的生命周期</h5><p>类的生命周期一个有7个阶段：加载、验证、准备、解析、初始化、使用、卸载</p>
+<ul>
+<li>加载:<br>  加载阶段，虚拟机需要完成以下3件事</li>
+</ul>
+<ol>
+<li><p>通过类的全限定名来获取此类的二进制字节流</p>
+</li>
+<li><p>将字节流所代表的静态存储结构转化为方法区的运行时数据结构</p>
+</li>
+<li><p>在内存中生成代表这个类的java.lang.Class对象，作为方法区这个类的各种数据访问入口  </p>
+</li>
+</ol>
+<ul>
+<li><p>验证：分4个验证</p>
+<ol>
+<li><p>文件格式验证，验证是否符合Class文件格式的规范，并且能被当前版本的虚拟机处理</p>
+</li>
+<li><p>元数据验证，对字节码描述的信息进行语义分析，以保证其描述的信息符合Java语言规范的要求</p>
+</li>
+<li><p>字节码验证,通过数据流和控制流分析，确定程序语义是否合法、符合逻辑</p>
+</li>
+<li><p>符合引用验证，是对类自身以外的信息进行匹配性校验(常量池中各种符合引用)</p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>准备：正式为类变量分配内存并设置初始值的阶段，这里设置初始值是数据类型的默认值</li>
+<li>解析：虚拟机将常量池中的符号引用替换为直接引用的过程</li>
+<li>初始化：执行类构造器的过程</li>
+</ul>
+<h5 id="强引用、软引用、弱引用、虚引用"><a href="#强引用、软引用、弱引用、虚引用" class="headerlink" title="强引用、软引用、弱引用、虚引用"></a>强引用、软引用、弱引用、虚引用</h5><ol>
+<li>强引用：大部分使用都是强引用，当内存不足时，会OOM，程序异常终止，也不会随意回收具有强引用的对象 </li>
+<li>软引用：内存足够时，不会清除对象，在内存不足时就会回收这些对象  </li>
+<li>弱引用：弱引用的对象，在发生GC的时候，就会被回收</li>
+<li>虚引用：虚引用主要用来跟踪垃圾回收的活动，虚引用必须和引用队列联合使用。</li>
+</ol>
+<h5 id="编译器会对指令做哪些优化？"><a href="#编译器会对指令做哪些优化？" class="headerlink" title="编译器会对指令做哪些优化？"></a>编译器会对指令做哪些优化？</h5><p>编译器优化分编译期和运行期  </p>
+<ul>
+<li><p>编译期：<br>1.标注检查，检查变量使用前是否已被声明、变量与赋值之间的数据类型是否能够匹配，对常量进行折叠<br>2.数据及控制流分析，检查诸如程序局部变量在使用前是否有赋值、是否所有的受检异常都被正确处理等问题<br>3.将语法糖还原为基础的语法结构<br>4.生成字节码  </p>
+</li>
+<li><p>运行期：<br>即时编译器JIT会把运行频繁的代码编译成与本地平台相关的机器码，并进行各种层次的优化<br>Client Compiler: 会进行局部性的优化，分三阶段：第一阶段，一个平台独立的前端将字节码构造成一种高级中间代码表示HIR，HIR使用静态单分配（SSA）的形式来代表代码值，在字节码上做方法内联，常量传播等基础优化；第二阶段，从HIR中产生低级中间代码，在这之前会做空值检查消除，范围检查消除等。第三阶段，在LIR上分配寄存器，并在LIR上做窥孔优化，最后产生机器码<br>Server Compiler: 会执行无用代码消除、循环展开、循环表达式外提、消除公共子表达式、常量传播、基本块重排序、范围检测消除、空值检查消除，另外还能根据解释器或Client Compiler提供的性能监控信息，进行一些不稳定的激进优化，比如守护内联、分支频率预测等</p>
+</li>
+<li><p>几种经典的优化技术：</p>
+</li>
+</ul>
+<ol>
+<li>公共子表达式消除<br>  如果一个表达式E已经计算过，并且从先前的计算到现在E中所有变量的值都没有发生变化，那么E的这次出现就成为公共子表达式</li>
+<li>数组范围检查消除<br>  编译期就判断数组是否在合理的范围内，如果在，那就可以在循环中把数组的上下界检查消除。另外还有隐式异常处理，虚拟机会注册一个Segment Fault信号的异常处理器，但如果代码经常为空，消耗时间比判空慢，但虚拟机会根据运行期收集到的信息选择使用判空还是隐式异常处理</li>
+<li>方法内联<br>  一可以给“公共子表达式消除”等其他优化技术提供基础。虚方法即多态情况下，如果要确定是否能内联，虚拟机需要向“类型继承关系分析”器查询，如果只有一个版本，那可以进行内联，但还会留一个“逃生门”，这种内联称为“守护内联”，如果继承关系发生变化，虚拟机会通过“逃生门”退回到解释状态执行，或重新编译。<br>  如果是多版本方法，虚拟机会通过“内联缓存”，在第一次调用的时候将目标方法版本缓存起来，下次调用的时候检查版本是否一致，如果不一致就会取消内联，查找虚拟方法表进行方法分派</li>
+<li>逃逸分析<br>  分析对象动态作用域，对象是否作为调用参数传递到其他方法中（方法逃逸），是否有被其他线程访问(线程逃逸)。如果没有以上情况，虚拟机会做一些高效优化：栈上分配、同步消除（去掉同步措施）、标量替换（将对象成员变量恢复到原始类型）</li>
+</ol>
+<h5 id="Serial、Parallel、CMS、G1收集器特点"><a href="#Serial、Parallel、CMS、G1收集器特点" class="headerlink" title="Serial、Parallel、CMS、G1收集器特点"></a>Serial、Parallel、CMS、G1收集器特点</h5><img src="/Users/chenjujun/Library/Application Support/typora-user-images/image-20191008191348602.png" alt="image-20191008191348602" style="zoom:50%;" />
 
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>(1)在全局配置文件（hexo/_config.yml)中将post_asset _folder设置为true；</p>
-<p>(2)创建文章（在创建的时候，会在hexo/source/_post目录下，生成一个XXX.md文件和一个XXX的文件夹）:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"XXX"</span></span><br></pre></td></tr></table></figure>
-<p>(3)把XXX这个博文需要展示的图片放在XXX文件夹目录下；</p>
-<p>(4)在XXX.md文件中引入图片的方式：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img example.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
+<img src="https://img-blog.csdn.net/20150928113651917?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img" style="zoom:50%;" />
 
-<h3 id="添加如下"><a href="#添加如下" class="headerlink" title="添加如下"></a>添加如下</h3><p><img src="img/71862163_p0.jpg" alt="header"></p>
+<img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g7r28u0oyxj30m109ijvg.jpg" alt="image-20191008202251538" style="zoom:50%;" />
+
+<ul>
+<li><p>Serial </p>
+<p>  单线程收集器，在进行垃圾收集时，必须暂停所有的工作线程直到手机结束，该收集器停顿时间长，-XX:+UseSerialGC 使用串行垃圾收集器</p>
+</li>
+<li><p>Parallel</p>
+<p>  采用多线程来扫描并压缩堆，停顿时间短，回收效率高，-XX:+UseParNewGC 使用并发标记扫描垃圾回收器</p>
+</li>
+<li><p>CMS 基于“标记-清除”算法，一共分初始标记、并发标记、重新标记、并发清除4个阶段</p>
+<p>  在初始标记、重新标记阶段需要STW，并且CMS收集器占用CPU资源较多，无法处理浮动垃圾（-XX:CMSInitiatingOccupancyFraction 调整老年代占用多少触发回收；-XX:+UseCMSCompactAtFullCollection 默认开启，在即将触发FullGC前对内存碎片进行整理；-XX:CMSFullGCsBeforeCompaction设置执行多少次不压缩的FullGC后，来一次带压缩的的碎片整理）  </p>
+</li>
+<li><p>G1 可以跟用户程序并发进行垃圾收集；分代收集，将堆划分成多个大小相等的独立Region区域；空间整合，默认就会进行内存整理；可预测的停顿，G1跟踪各个Region的回收获得的空间大小和回收所需要的经验值，维护一个优先列表；</p>
+</li>
+</ul>
+<h5 id="volatile的特点"><a href="#volatile的特点" class="headerlink" title="volatile的特点"></a>volatile的特点</h5><ul>
+<li>修改可见性，通过volatile修饰的变量，线程对变量的修改对另一个线程即时可见，因此另外一个线程在使用前会去判断该变量是否有修改；  </li>
+<li>禁止指令重排序<br>  <code>long 和double的读写操作分为两次32位操作进行，其他基本数据类型的读写操作都是原子性的</code><br>  实现：加入volatile关键字的代码生成汇编代码，会发现多了一个lock前缀指令，这个指令相当于一个内存屏障，可以防止重排序，通过空的写入操作将变量的修改写入到主内存中，这就实现了可见性</li>
+</ul>
 
       
 
@@ -256,7 +374,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://dxjin.cn/2019/11/06/%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://dxjin.cn/2019/11/13/4.%20JVM%E7%9F%A5%E8%AF%86/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,18 +388,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/13/7.%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/13/%E5%AF%BC%E8%AF%BB/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          7. 数据结构
+          导读
         
       </div>
     </a>
   
   
-    <a href="/2019/11/02/%E8%BF%99%E6%98%AF%E4%B8%AA%E6%B5%8B%E8%AF%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">这是个测试</div>
+    <a href="/2019/11/13/5.%20Java%E5%8F%8D%E5%B0%84IO/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">5. Java反射IO</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -308,7 +426,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一"><span class="toc-number">1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二"><span class="toc-number">2.</span> <span class="toc-text">方法二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加如下"><span class="toc-number">3.</span> <span class="toc-text">添加如下</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#JVM知识"><span class="toc-number">1.</span> <span class="toc-text">JVM知识</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#JVM运行时内存区域划分"><span class="toc-number">1.1.</span> <span class="toc-text">JVM运行时内存区域划分</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#OOM-及SOE的示例、原因，排查方法"><span class="toc-number">1.2.</span> <span class="toc-text">OOM,及SOE的示例、原因，排查方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#如何判断对象可以回收或存活"><span class="toc-number">1.3.</span> <span class="toc-text">如何判断对象可以回收或存活</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#哪些对象可以作为GC-ROOT-对象"><span class="toc-number">1.4.</span> <span class="toc-text">哪些对象可以作为GC ROOT 对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#常见的GC算法"><span class="toc-number">1.5.</span> <span class="toc-text">常见的GC算法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#常见的JVM性能监测分析工具"><span class="toc-number">1.6.</span> <span class="toc-text">常见的JVM性能监测分析工具</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JVM优化"><span class="toc-number">1.7.</span> <span class="toc-text">JVM优化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#什么时候会触发FullGC"><span class="toc-number">1.8.</span> <span class="toc-text">什么时候会触发FullGC</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#类加载器有几种"><span class="toc-number">1.9.</span> <span class="toc-text">类加载器有几种</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#什么是双亲委派模型？双亲委派模型的破坏"><span class="toc-number">1.10.</span> <span class="toc-text">什么是双亲委派模型？双亲委派模型的破坏</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#类的生命周期"><span class="toc-number">1.11.</span> <span class="toc-text">类的生命周期</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#强引用、软引用、弱引用、虚引用"><span class="toc-number">1.12.</span> <span class="toc-text">强引用、软引用、弱引用、虚引用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#编译器会对指令做哪些优化？"><span class="toc-number">1.13.</span> <span class="toc-text">编译器会对指令做哪些优化？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Serial、Parallel、CMS、G1收集器特点"><span class="toc-number">1.14.</span> <span class="toc-text">Serial、Parallel、CMS、G1收集器特点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#volatile的特点"><span class="toc-number">1.15.</span> <span class="toc-text">volatile的特点</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

@@ -6,20 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://dxjin.cn">
-  <title>博文中添加图片 | 白饭的正确吃法</title>
+  <title>2. Java并发 | 白饭的正确吃法</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="方法一（1）在hexo目录下安装插件： 1npm install hexo-asset-image --save  （2）在hexo&#x2F;source目录下创建img文件夹，把图片放置在里面； （3）在xxx.md文件中引用图片： 1![header]( img&#x2F;header.jpg)   方法二(1)在全局配置文件（hexo&#x2F;_config.yml)中将post_asset _folder设置为tr">
+  <meta name="description" content="Java并发[TOC]  《Java并发编程的艺术》、《Java并发编程之美》  ThreadLocal 子类及原理, OOM产生原因及防治 InheritableThreadLocal    继承了ThreadLocal，并重写childValue、getMap、createMap，对该类的操作实际上是对线程ThreadLocalMap的操作   子线程能够读取父线程数据，实际原因是新建子线程的">
 <meta name="keywords" content="java,stringboot,springcloud,后端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博文中添加图片">
-<meta property="og:url" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;index.html">
+<meta property="og:title" content="2. Java并发">
+<meta property="og:url" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;13&#x2F;2.%20Java%E5%B9%B6%E5%8F%91&#x2F;index.html">
 <meta property="og:site_name" content="白饭的正确吃法">
-<meta property="og:description" content="方法一（1）在hexo目录下安装插件： 1npm install hexo-asset-image --save  （2）在hexo&#x2F;source目录下创建img文件夹，把图片放置在里面； （3）在xxx.md文件中引用图片： 1![header]( img&#x2F;header.jpg)   方法二(1)在全局配置文件（hexo&#x2F;_config.yml)中将post_asset _folder设置为tr">
+<meta property="og:description" content="Java并发[TOC]  《Java并发编程的艺术》、《Java并发编程之美》  ThreadLocal 子类及原理, OOM产生原因及防治 InheritableThreadLocal    继承了ThreadLocal，并重写childValue、getMap、createMap，对该类的操作实际上是对线程ThreadLocalMap的操作   子线程能够读取父线程数据，实际原因是新建子线程的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;img&#x2F;71862163_p0.jpg">
-<meta property="og:updated_time" content="2019-11-06T08:45:32.262Z">
+<meta property="og:updated_time" content="2019-10-26T18:25:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;img&#x2F;71862163_p0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="白饭的正确吃法" type="application/atom+xml">
   
@@ -162,42 +160,85 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-博文中添加图片" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2. Java并发" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      博文中添加图片
+      2. Java并发
     </h1>
   
 
         
-        <a href="/2019/11/06/%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87/" class="archive-article-date">
-  	<time datetime="2019-11-06T07:57:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
+        <a href="/2019/11/13/2.%20Java%E5%B9%B6%E5%8F%91/" class="archive-article-date">
+  	<time datetime="2019-11-13T14:56:10.950Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>（1）在hexo目录下安装插件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-
-<p>（2）在hexo/source目录下创建img文件夹，把图片放置在里面；</p>
-<p>（3）在xxx.md文件中引用图片：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![header]( img/header.jpg)</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>(1)在全局配置文件（hexo/_config.yml)中将post_asset _folder设置为true；</p>
-<p>(2)创建文章（在创建的时候，会在hexo/source/_post目录下，生成一个XXX.md文件和一个XXX的文件夹）:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"XXX"</span></span><br></pre></td></tr></table></figure>
-<p>(3)把XXX这个博文需要展示的图片放在XXX文件夹目录下；</p>
-<p>(4)在XXX.md文件中引入图片的方式：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img example.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="添加如下"><a href="#添加如下" class="headerlink" title="添加如下"></a>添加如下</h3><p><img src="img/71862163_p0.jpg" alt="header"></p>
+        <h4 id="Java并发"><a href="#Java并发" class="headerlink" title="Java并发"></a>Java并发</h4><p>[TOC]</p>
+<blockquote>
+<p>《Java并发编程的艺术》、《Java并发编程之美》</p>
+</blockquote>
+<h5 id="ThreadLocal-子类及原理-OOM产生原因及防治"><a href="#ThreadLocal-子类及原理-OOM产生原因及防治" class="headerlink" title="ThreadLocal 子类及原理, OOM产生原因及防治"></a>ThreadLocal 子类及原理, OOM产生原因及防治</h5><ul>
+<li><p>InheritableThreadLocal </p>
+<p>  继承了ThreadLocal，并重写childValue、getMap、createMap，对该类的操作实际上是对线程ThreadLocalMap的操作</p>
+<p>  子线程能够读取父线程数据，实际原因是新建子线程的时候，会从父线程copy数据</p>
+</li>
+<li><p>OOM原因及防治<br>  ThreadLocal只是一个工具类，具体存放变量的是线程的threadLocals变量，threadLocals是一个ThreadLocalMap类型的变量，内部是一个Entry数组，Entry继承自WeakReference,Entry内部的value用来存放通过ThreadLocal的set方法传递的值,key是ThreadLocal的弱引用，key虽然会被GC回收，但value不能被回收，这时候ThreadLocalMap中会存在key为null，value不为null的entry项，如果时间长了就会存在大量无用对象，造成OOM。虽然set,get也提供了一些对Entry项清理的时机，但不及时，<code>所以在使用完毕后需要及时调用remove</code></p>
+</li>
+</ul>
+<h5 id="ConcurrentLinkedQueue、LinkedBlockingQueue、ArrayBlockingQueue、PriorityBlockingQueue、DelayQueue、SynchronousQueue、LinkedBlockingDeque、LinkedTransferQueue"><a href="#ConcurrentLinkedQueue、LinkedBlockingQueue、ArrayBlockingQueue、PriorityBlockingQueue、DelayQueue、SynchronousQueue、LinkedBlockingDeque、LinkedTransferQueue" class="headerlink" title="ConcurrentLinkedQueue、LinkedBlockingQueue、ArrayBlockingQueue、PriorityBlockingQueue、DelayQueue、SynchronousQueue、LinkedBlockingDeque、LinkedTransferQueue"></a>ConcurrentLinkedQueue、LinkedBlockingQueue、ArrayBlockingQueue、PriorityBlockingQueue、DelayQueue、SynchronousQueue、LinkedBlockingDeque、LinkedTransferQueue</h5><p>ConcurrentLinkedQueue: 无界非阻塞队列，底层使用单向链表实现，对于出队和入队使用CAS来实现线程安全<br>LinkedBlockingQueue: 有界阻塞队列，使用单向链表实现，通过ReentrantLock实现线程安全，阻塞通过Condition实现，出队和入队各一把锁，不存在互相竞争<br>ArrayBlockingQueue: 有界数组方式实现的阻塞队列 , 通过ReentrantLock实现线程安全，阻塞通过Condition实现，出队和入队使用同一把锁<br>PriorityBlockingQueue: 带优先级的无界阻塞队列，内部使用平衡二叉树堆实现，遍历保证有序需要自定排序<br>DelayQueue: 无界阻塞延迟队列，队列中的每个元素都有个过期时间，当从队列获取元素时，只有过期元素才会出队列，队列头元素是最快要过期的元素<br>SynchronousQueue: 任何一个写需要等待一个读的操作，读操作也必须等待一个写操作，相当于数据交换  <a href="https://www.cnblogs.com/dwlsxj/p/Thread.html" target="_blank" rel="noopener">https://www.cnblogs.com/dwlsxj/p/Thread.html</a><br>LinkedTransferQueue: 由链表组成的无界阻塞队列，多了tryTransfer 和 transfer方法。transfer方法，能够把生产者元素立刻传输给消费者，如果没有消费者在等待，那就会放入队列的tail节点，并阻塞等待元素被消费了返回，可以使用带超时的方法。tryTransfer方法，会在没有消费者等待接收元素的时候马上返回false</p>
+<p>LinkedBlockingDeque: 由链表组成的双向阻塞队列，可以从队列的两端插入和移除元素  </p>
+<h5 id="ThreadPoolExecutor构造函数有哪几个参数，实现原理，创建线程池的方式"><a href="#ThreadPoolExecutor构造函数有哪几个参数，实现原理，创建线程池的方式" class="headerlink" title="ThreadPoolExecutor构造函数有哪几个参数，实现原理，创建线程池的方式"></a>ThreadPoolExecutor构造函数有哪几个参数，实现原理，创建线程池的方式</h5><ul>
+<li><p>构造参数：<br>  corePoolSize: 线程池核心线程个数<br>  workQueue: 用于保存等待执行任务的阻塞队列<br>  maximunPoolSize: 线程池最大线程数量<br>  ThreadFactory: 创建线程的工厂<br>  RejectedExecutionHandler: 队列满，并且线程达到最大线程数量的时候，对新任务的处理策略，AbortPolicy（抛出异常）、CallerRunsPolicy(使用调用者所在线程执行)、DiscardOldestPolicy(调用poll丢弃一个任务，执行当前任务)、DiscardPolicy(默默丢弃、不抛异常)<br>  keeyAliveTime: 空闲线程存活时间<br>  TimeUnit: 存活时间单位  </p>
+</li>
+<li><p>原理：<br>  线程池主要是解决两个问题：</p>
+<p>  一个是当执行大量异步任务时能够提供较好的性能，能复用线程处理任务；</p>
+<p>  二是能够对线程池进行资源限制和管理。</p>
+<p>  一个任务提交的线程池，首先会判断核心线程池是否已满，未满就会创建worker线程执行任务，已满判断阻塞队列是否已满，阻塞队列未满加入阻塞队列，已满就判断线程池线程数量是否已经达到最大值，没有就新建线程执行任务，达到最大值的话执行拒绝策略。</p>
+<p>  拒绝策略有：直接抛出异常、使用调用者所在线程执行、丢弃一个旧任务，执行当前任务、直接丢弃什么都不做。  </p>
+</li>
+<li><p>创建线程池的方式：直接new ThreadPoolExecutor 或者通过Executors工具类创建 </p>
+</li>
+</ul>
+<h5 id="Executors-可以创建的线程池类型"><a href="#Executors-可以创建的线程池类型" class="headerlink" title="Executors 可以创建的线程池类型"></a>Executors 可以创建的线程池类型</h5><ol>
+<li>newFixedThreadPool 创建一个核心线程数跟最大线程数相同的线程池，因此池中的线程数量既不会增加也不会变少，如果有空闲线程任务就会被执行，如果没有就放入任务队列，等待空闲线程</li>
+<li>newSingleThreadExecutor 创建一个只有一个线程的线程池，能够串行执行任务，如果线程因为异常而停止，会自动新建一个线程补充</li>
+<li>newCachedThreadPool  创建一个核心线程数为0，最大线程为Inter.MAX_VALUE的线程池，也就是说没有限制,线程池中的线程数量不确定，但如果有空闲线程可以复用，则优先使用，如果没有空闲线程，则创建新线程处理任务，处理完放入线程池</li>
+<li>newSingleThreadScheduledExecutor 创建只有一个线程的可以定时执行的线程池</li>
+<li>newScheduledThreadPool 创建一个没有最大线程数限制的可以定时执行线程池</li>
+<li>newWorkStealingPool 创建一个含有足够多线程的线程池，能够调用闲置的CPU去处理其他的任务，使用ForkJoinPool实现，jdk8新增</li>
+</ol>
+<h5 id="线程池的阻塞队列为什么都用LinkedBlockingQueue，而不用ArrayBlockingQueue"><a href="#线程池的阻塞队列为什么都用LinkedBlockingQueue，而不用ArrayBlockingQueue" class="headerlink" title="线程池的阻塞队列为什么都用LinkedBlockingQueue，而不用ArrayBlockingQueue"></a>线程池的阻塞队列为什么都用LinkedBlockingQueue，而不用ArrayBlockingQueue</h5><p>LinkedBlockingQueue 使用单向链表实现，在声明LinkedBlockingQueue的时候，可以不指定队列长度，长度为Integer.MAX_VALUE, b并且新建了一个Node对象,Node对象具有item，next变量，item用于存储元素，next指向链表下一个Node对象，在刚开始的时候链表的head,last都指向该Node对象，item、next都为null,新元素放在链表的尾部，并从头部取元素。取元素的时候只是一些指针的变化，LinkedBlockingQueue给put(放入元素),take(取元素)都声明了一把锁，放入和取互不影响，效率更高</p>
+<p>ArrayBlockingQueue 使用数组实现，在声明的时候必须指定长度，如果长度太大，造成内存浪费，长度太小，并发性能不高，如果数组满了，就无法放入元素，除非有其他线程取出元素，放入和取出都使用同一把锁，因此存在竞争，效率比LinkedBlockingQueue低</p>
+<h5 id="为什么建议在不用线程池的时候，关闭线程池，线程池的作用就是复用线程"><a href="#为什么建议在不用线程池的时候，关闭线程池，线程池的作用就是复用线程" class="headerlink" title="为什么建议在不用线程池的时候，关闭线程池，线程池的作用就是复用线程"></a>为什么建议在不用线程池的时候，关闭线程池，线程池的作用就是复用线程</h5><p>线程池的作用确实是为了减少频繁创建线程，使线程达到复用。但如果在不用线程池的情况下，线程池中的核心线程会一直存在，浪费资源，所以建议在不用的情况下调用shutdown方法关闭线程池。在需要的时候再调用创建线程池。</p>
+<h5 id="Timer-和-ScheduledThreadPoolExecutor-区别"><a href="#Timer-和-ScheduledThreadPoolExecutor-区别" class="headerlink" title="Timer 和 ScheduledThreadPoolExecutor 区别"></a>Timer 和 ScheduledThreadPoolExecutor 区别</h5><p>Timer是固定的多线程生产者单线程消费，如果其中一个任务报错，其他任务也会失效;</p>
+<p>但后者是可以配置的，既可以是多线程生产单线程消费也可以是多线程生产多线程消费</p>
+<h5 id="说说CopyOnWriteArrayList"><a href="#说说CopyOnWriteArrayList" class="headerlink" title="说说CopyOnWriteArrayList"></a>说说CopyOnWriteArrayList</h5><p>CopyOnWriteArrayList是一个线程安全的ArrayList，对其的修改操作是在一个复制的数组上进行的，不影响其他线程的读操作</p>
+<p>其中通过ReentrantLock独占锁保证只有一个线程对底层数组进行修改</p>
+<p>由于在进行修改操作的时候，底层会复制一个新的数组，而读是在原数组上进行的，因此在多线程环境下这里会产生数据不一致的情况，称为弱一致性</p>
+<h5 id="CountDownLatch原理、CyclicBarrier原理，两者区别"><a href="#CountDownLatch原理、CyclicBarrier原理，两者区别" class="headerlink" title="CountDownLatch原理、CyclicBarrier原理，两者区别"></a>CountDownLatch原理、CyclicBarrier原理，两者区别</h5><ul>
+<li><p>CountDownLatch:<br>  使用AQS实现，通过AQS的状态变量state来作为计数器值,当多个线程调用countdown方法时实际是原子性递减AQS的状态值，当线程调用await方法后当前线程会被放入AQS阻塞队列等待计数器为0再返回  </p>
+</li>
+<li><p>CyclicBarrier:<br>  区别：CountDownLatch计数器是一次性的，变为0后就起不到线程同步的作用了。而CyclicBarrier(撒克里克巴瑞儿)在计数器变为0后重新开始，通过调用await方法，能在所有线程到达屏障点后统一执行某个任务，再执行完后继续执行子线程</p>
+</li>
+</ul>
+<h5 id="Semaphore-原理"><a href="#Semaphore-原理" class="headerlink" title="Semaphore 原理"></a>Semaphore 原理</h5><p>Semaphore 可以用来控制同时访问特定资源的线程数量，它通过协调各个线程，以保证合理的使用公共资源,使用AQS实现，AQS的状态变量state做为许可证数量，每次通过acquire()/tryAcquire()，许可证数量通过CAS原子性递减，调用release()释放许可证，原子性递增，只要有许可证就可以重复使用</p>
+<h5 id="Exchanger-原理"><a href="#Exchanger-原理" class="headerlink" title="Exchanger 原理"></a>Exchanger 原理</h5><p>用于进行线程间的数据交换，它提供一个同步点，在这个同步点两个线程可以交换彼此的数据。如果第一个线程先执行exchange()方法，它会一直等待第二个线程也执行exchange方法，当都达到同步点时，这两个线程可以交换数据。<br><a href="https://blog.csdn.net/coslay/article/details/45242581" target="_blank" rel="noopener">https://blog.csdn.net/coslay/article/details/45242581</a></p>
+<h5 id="Java8新增的原子操作类"><a href="#Java8新增的原子操作类" class="headerlink" title="Java8新增的原子操作类"></a>Java8新增的原子操作类</h5><p>LongAdder 由于AtomicLong通过CAS提供非阻塞的原子性操作，性能已经很好，在高并发下大量线程竞争更新同一个原子量，但只有一个线程能够更新成功，这就造成大量的CPU资源浪费。<br>LongAdder 通过让多个线程去竞争多个Cell资源，来解决，再很高的并发情况下,线程操作的是Cell数组，并不是base，在cell元素不足时进行2倍扩容，在高并发下性能高于AtomicLong<br>LongAccumulator 提供了一个函数式接口，可以自定义运算规则</p>
+<h5 id="如何实现一个生产者与消费者模型"><a href="#如何实现一个生产者与消费者模型" class="headerlink" title="如何实现一个生产者与消费者模型"></a>如何实现一个生产者与消费者模型</h5><p>一共5种方法  </p>
+<ol>
+<li>同步对象的 wait() / notify() 方法  </li>
+<li>ReetrantLock Condition 的 await() / signal()方法</li>
+<li>BlockingQueue阻塞队列 put() 和take方法</li>
+<li>Semaphore 基于计数的信号量</li>
+<li>PipedInputStream / PipedOutputStream 管道输入输出流<br><a href="https://blog.csdn.net/ldx19980108/article/details/81707751" target="_blank" rel="noopener">https://blog.csdn.net/ldx19980108/article/details/81707751</a></li>
+</ol>
 
       
 
@@ -256,7 +297,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://dxjin.cn/2019/11/06/%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://dxjin.cn/2019/11/13/2.%20Java%E5%B9%B6%E5%8F%91/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,18 +311,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/13/7.%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/13/1.%20Java%E5%9F%BA%E7%A1%80/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          7. 数据结构
+          1. Java基础
         
       </div>
     </a>
   
   
-    <a href="/2019/11/02/%E8%BF%99%E6%98%AF%E4%B8%AA%E6%B5%8B%E8%AF%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">这是个测试</div>
+    <a href="/2019/11/13/3.%20%E9%94%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">3. 锁</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -308,7 +349,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一"><span class="toc-number">1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二"><span class="toc-number">2.</span> <span class="toc-text">方法二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加如下"><span class="toc-number">3.</span> <span class="toc-text">添加如下</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java并发"><span class="toc-number">1.</span> <span class="toc-text">Java并发</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#ThreadLocal-子类及原理-OOM产生原因及防治"><span class="toc-number">1.1.</span> <span class="toc-text">ThreadLocal 子类及原理, OOM产生原因及防治</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ConcurrentLinkedQueue、LinkedBlockingQueue、ArrayBlockingQueue、PriorityBlockingQueue、DelayQueue、SynchronousQueue、LinkedBlockingDeque、LinkedTransferQueue"><span class="toc-number">1.2.</span> <span class="toc-text">ConcurrentLinkedQueue、LinkedBlockingQueue、ArrayBlockingQueue、PriorityBlockingQueue、DelayQueue、SynchronousQueue、LinkedBlockingDeque、LinkedTransferQueue</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ThreadPoolExecutor构造函数有哪几个参数，实现原理，创建线程池的方式"><span class="toc-number">1.3.</span> <span class="toc-text">ThreadPoolExecutor构造函数有哪几个参数，实现原理，创建线程池的方式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Executors-可以创建的线程池类型"><span class="toc-number">1.4.</span> <span class="toc-text">Executors 可以创建的线程池类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#线程池的阻塞队列为什么都用LinkedBlockingQueue，而不用ArrayBlockingQueue"><span class="toc-number">1.5.</span> <span class="toc-text">线程池的阻塞队列为什么都用LinkedBlockingQueue，而不用ArrayBlockingQueue</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#为什么建议在不用线程池的时候，关闭线程池，线程池的作用就是复用线程"><span class="toc-number">1.6.</span> <span class="toc-text">为什么建议在不用线程池的时候，关闭线程池，线程池的作用就是复用线程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Timer-和-ScheduledThreadPoolExecutor-区别"><span class="toc-number">1.7.</span> <span class="toc-text">Timer 和 ScheduledThreadPoolExecutor 区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#说说CopyOnWriteArrayList"><span class="toc-number">1.8.</span> <span class="toc-text">说说CopyOnWriteArrayList</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#CountDownLatch原理、CyclicBarrier原理，两者区别"><span class="toc-number">1.9.</span> <span class="toc-text">CountDownLatch原理、CyclicBarrier原理，两者区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Semaphore-原理"><span class="toc-number">1.10.</span> <span class="toc-text">Semaphore 原理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Exchanger-原理"><span class="toc-number">1.11.</span> <span class="toc-text">Exchanger 原理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Java8新增的原子操作类"><span class="toc-number">1.12.</span> <span class="toc-text">Java8新增的原子操作类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#如何实现一个生产者与消费者模型"><span class="toc-number">1.13.</span> <span class="toc-text">如何实现一个生产者与消费者模型</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

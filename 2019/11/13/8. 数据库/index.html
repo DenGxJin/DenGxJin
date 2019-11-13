@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://dxjin.cn">
-  <title>博文中添加图片 | 白饭的正确吃法</title>
+  <title>8. 数据库 | 白饭的正确吃法</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="方法一（1）在hexo目录下安装插件： 1npm install hexo-asset-image --save  （2）在hexo&#x2F;source目录下创建img文件夹，把图片放置在里面； （3）在xxx.md文件中引用图片： 1![header]( img&#x2F;header.jpg)   方法二(1)在全局配置文件（hexo&#x2F;_config.yml)中将post_asset _folder设置为tr">
+  <meta name="description" content="数据库 《高性能Mysql(第三版)》  数据库三大范式、反模式 强调属性的原子性约束，要求属性具有原子性，不可再分解 强调记录的唯一性约束，表必须有一个主键，并且没有包含在主键中的列必须完全依赖于主键，而不能只依赖于主键的一部分 强调属性冗余性的约束，即非主键列必须直接依赖于主键  反模式：如果完全按照三大范式来设计表结构，会导致业务涉及表增多，查询数据需要多表联合查询，导致sql复杂，性能变差">
 <meta name="keywords" content="java,stringboot,springcloud,后端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博文中添加图片">
-<meta property="og:url" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;index.html">
+<meta property="og:title" content="8. 数据库">
+<meta property="og:url" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;13&#x2F;8.%20%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;index.html">
 <meta property="og:site_name" content="白饭的正确吃法">
-<meta property="og:description" content="方法一（1）在hexo目录下安装插件： 1npm install hexo-asset-image --save  （2）在hexo&#x2F;source目录下创建img文件夹，把图片放置在里面； （3）在xxx.md文件中引用图片： 1![header]( img&#x2F;header.jpg)   方法二(1)在全局配置文件（hexo&#x2F;_config.yml)中将post_asset _folder设置为tr">
+<meta property="og:description" content="数据库 《高性能Mysql(第三版)》  数据库三大范式、反模式 强调属性的原子性约束，要求属性具有原子性，不可再分解 强调记录的唯一性约束，表必须有一个主键，并且没有包含在主键中的列必须完全依赖于主键，而不能只依赖于主键的一部分 强调属性冗余性的约束，即非主键列必须直接依赖于主键  反模式：如果完全按照三大范式来设计表结构，会导致业务涉及表增多，查询数据需要多表联合查询，导致sql复杂，性能变差">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;img&#x2F;71862163_p0.jpg">
-<meta property="og:updated_time" content="2019-11-06T08:45:32.262Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g894p7xhhhj30hg0iw75t.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g851jewhuoj31270u0wte.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g78rx8258ij313a0tkn0j.jpg">
+<meta property="og:updated_time" content="2019-10-26T18:25:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;dxjin.cn&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87&#x2F;img&#x2F;71862163_p0.jpg">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;006y8mN6ly1g894p7xhhhj30hg0iw75t.jpg">
   
     <link rel="alternative" href="/atom.xml" title="白饭的正确吃法" type="application/atom+xml">
   
@@ -162,42 +164,191 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-博文中添加图片" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-8. 数据库" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      博文中添加图片
+      8. 数据库
     </h1>
   
 
         
-        <a href="/2019/11/06/%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87/" class="archive-article-date">
-  	<time datetime="2019-11-06T07:57:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
+        <a href="/2019/11/13/8.%20%E6%95%B0%E6%8D%AE%E5%BA%93/" class="archive-article-date">
+  	<time datetime="2019-11-13T14:56:10.888Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>（1）在hexo目录下安装插件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+        <h4 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h4><blockquote>
+<p>《高性能Mysql(第三版)》</p>
+</blockquote>
+<h5 id="数据库三大范式、反模式"><a href="#数据库三大范式、反模式" class="headerlink" title="数据库三大范式、反模式"></a>数据库三大范式、反模式</h5><ol>
+<li>强调属性的原子性约束，要求属性具有原子性，不可再分解</li>
+<li>强调记录的唯一性约束，表必须有一个主键，并且没有包含在主键中的列必须完全依赖于主键，而不能只依赖于主键的一部分</li>
+<li>强调属性冗余性的约束，即非主键列必须直接依赖于主键</li>
+</ol>
+<p>反模式：如果完全按照三大范式来设计表结构，会导致业务涉及表增多，查询数据需要多表联合查询，导致sql复杂，性能变差，不利于维护，也不利于分库分表，比如会在表中冗余存储城市id对应的城市名称</p>
+<p><a href="http://blog.720ui.com/2017/mysql_core_07_anti-pattern/" target="_blank" rel="noopener">http://blog.720ui.com/2017/mysql_core_07_anti-pattern/</a></p>
+<h5 id="Mysql-架构图"><a href="#Mysql-架构图" class="headerlink" title="Mysql 架构图"></a>Mysql 架构图</h5><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g894p7xhhhj30hg0iw75t.jpg" alt="image-20191020162238485" style="zoom:50%;" />
 
-<p>（2）在hexo/source目录下创建img文件夹，把图片放置在里面；</p>
-<p>（3）在xxx.md文件中引用图片：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![header]( img/header.jpg)</span><br></pre></td></tr></table></figure>
+<h5 id="InnoDB存储结构"><a href="#InnoDB存储结构" class="headerlink" title="InnoDB存储结构"></a>InnoDB存储结构</h5><p>逻辑存储单元分为表空间(TableSpace) -&gt; 段(segment) -&gt; 区(extent) -&gt; 页(page)</p>
+<p>Mysql 8.0 InnoDB架构图</p>
+<img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g851jewhuoj31270u0wte.jpg" alt="image-20191020223620225" style="zoom:50%;" />
 
+<ul>
+<li><p>表空间：所有数据都存在表空间中，表空间分系统表空间和独立表空间。</p>
+<p>  系统表空间</p>
+<p>  在安装数据库的时候默认会初始化一个以ibdata1命名的系统表空间，存储所有数据的信息以及回滚段信息，ibdata1默认的大小是10MB,在高并发情况下，会有性能影响，建议初始大小调整为1GB。</p>
+<p>  <code>相关教程参考：https://blog.csdn.net/demonson/article/details/79863166</code></p>
+<p>  独立表空间</p>
+<p>  设置参数innodb_file_per_table = 1 ，目前MySQL默认都是独立表空间，每个表都有自己的表空间文件，存储对应表的B+数数据、索引和插入缓冲等信息，其余信息还是存储在共享表空间中</p>
+<p>  撤销表空间</p>
+<p>  包含撤销日志，初始化的时候会创建两个默认的撤销表空间</p>
+<p>  通用表空间</p>
+<p>  可以存储多个表的数据，相比独立表空间更节约元数据的内存开销</p>
+<p>  临时表空间</p>
+<p>  分会话临时表空间和全局临时表空间。会话临时表空间，在第一个请求中，会话临时表空间从临时表空间池分配给会话，最多两个临时表空间，一个用于用户创建的临时表，另一个用于优化器创建的内部临时表，当会话断开时，临时表空间将被释放进入临时表空间池中；全局临时表空间，用于存储用户创建的临时表的更改数据，用于回滚，在正常关闭或初始化中止时被删除，并在每次启动服务器时重新创建</p>
+</li>
+<li><p>段</p>
+<p>  表空间由段组成，一个表通常有数据段、回滚段、索引段等，每个段由N个区和32个零散的页组成</p>
+</li>
+<li><p>区</p>
+<p>  由连续的页组成，每个区大小固定1MB</p>
+</li>
+<li><p>页</p>
+<p>  一个区由64个连续页组成，页默认大小16KB</p>
+</li>
+</ul>
+<h5 id="存储引擎的-InnoDB与MyISAM区别，优缺点，使用场景"><a href="#存储引擎的-InnoDB与MyISAM区别，优缺点，使用场景" class="headerlink" title="存储引擎的 InnoDB与MyISAM区别，优缺点，使用场景"></a>存储引擎的 InnoDB与MyISAM区别，优缺点，使用场景</h5><p>ACID:</p>
+<p>原子性（atomicity）、一致性（consistency）、隔离性（isolation）、持久性（durability）</p>
+<table>
+<thead>
+<tr>
+<th>存储引擎</th>
+<th>InnoDB</th>
+<th>MyISAM</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>存储文件</td>
+<td>.frm表定义文件 .ibd数据文件</td>
+<td>.frm表定义文件<br> .myd数据文件<br> .myi 索引文件</td>
+</tr>
+<tr>
+<td>锁</td>
+<td>表锁，行锁</td>
+<td>表锁</td>
+</tr>
+<tr>
+<td>事务</td>
+<td>ACID</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>CRUD</td>
+<td>读写</td>
+<td>读多</td>
+</tr>
+<tr>
+<td>count</td>
+<td>扫表</td>
+<td>专门存储的地方</td>
+</tr>
+<tr>
+<td>索引结构</td>
+<td>B+Tree</td>
+<td>B+Tree</td>
+</tr>
+</tbody></table>
+<h5 id="建立索引的原则"><a href="#建立索引的原则" class="headerlink" title="建立索引的原则"></a>建立索引的原则</h5><ol>
+<li>最左匹配原则，直到遇到范围查询(&gt;, &lt;, between, like)就停止，比如a = 1 and b = 2 and c &gt;3 and d = 4 如果建立(a,b,c,d)顺序的索引，d是用不到索引的，如果建立(a,b,d,c)的索引则都可以用到，abd的顺序可以任意调整</li>
+<li>= 和 in可以乱序，比如a = 1 and b =2 and c = 3建立(a, b, c) 索引可以任意顺序，mysql查询优化器会帮你优化</li>
+<li>尽量选择区分度高的索引，区分度公式count(distinct col)/count(*) ，表示字段不重复的比例，比例越大我们的扫描记录越少,比例一般是需要join的字段要求是0.1以上，即平均1条扫描10条记录</li>
+<li>索引不能参与计算，比如from_unixtime(create_time) = ‘2014-05-29’ 就不能使用到索引，因为b+tree中存的都是数据表中的字段值，但进行检索时，需要把素有元素都应用到函数才能比较，成本大，应该改成create_time = unix_timestamp(‘2014-05-29’)</li>
+<li>尽量扩展索引，不要新建索引，比如表中已经有a索引，现在要加(a,b)索引，只需要修改原来的索引即可</li>
+</ol>
+<h5 id="B-Tree-索引-和-哈希索引-限制"><a href="#B-Tree-索引-和-哈希索引-限制" class="headerlink" title="B+Tree 索引 和 哈希索引 限制"></a>B+Tree 索引 和 哈希索引 限制</h5><p>B+Tree索引：</p>
+<p>分两类，聚集索引和 普通索引</p>
+<p>聚集索引，在创建表的时候，会创建一个主键，这个主键就是聚集索引，在索引叶子节点中存放了数据信息。InnoDB会给没有创建主键的表选择第一个不包含null值的唯一索引作为主键，如果唯一索引也没有，就会为该表创建一个6字节的rowid作为主键</p>
+<p>普通索引，索引叶子节点并不包含所有行的数据，只保留键值，通过键来查找行数据</p>
+<ul>
+<li>全值匹配，和索引中的所有列进行匹配</li>
+<li>匹配最左前缀</li>
+<li>匹配列前缀，可以只匹配某一列的值开头部分</li>
+<li>匹配范围值，如果匹配的列不是主键，只能使用第一个索引来匹配范围，否则不走索引，如果匹配列是主键，可以不按照索引顺序来，走的是主键索引</li>
+<li>精确匹配某一个列并范围匹配另外一列</li>
+</ul>
+<p>哈希索引：</p>
+<ul>
+<li>哈希索引只包含哈希值和行指针，而不存储字段值，所以不能使用索引中的值来避免读取行。不过，访问内存中行的速度很快</li>
+<li>哈希索引数据并不是按照索引值顺序存储的，所以也无法用于排序</li>
+<li>哈希索引不支持部分索引列匹配查找，因为哈希索引始终使用索引列的全部内容来计算哈希值</li>
+<li>只支持等值比较查询，包括 =、 in()、&lt;=&gt;，不支持范围查询</li>
+<li>数据访问速度快，当哈希冲突时，必须遍历链表中的所有行指针，直到查询到符合条件的行</li>
+<li>哈希冲突多的话，一些索引维护操作的代代价很高</li>
+</ul>
+<h5 id="事务隔离级别，设置事务方法"><a href="#事务隔离级别，设置事务方法" class="headerlink" title="事务隔离级别，设置事务方法"></a>事务隔离级别，设置事务方法</h5><ol>
+<li><p>read uncommitted(未提交读) ： 可以看到未提交的数据,脏读</p>
+</li>
+<li><p>read committed (提交读)：只能读取已提交的数据，但多次读取的数据结果可能不一致，导致幻读</p>
+</li>
+<li><p>repeatable read(可重复读)：默认级别，可以重复读，解决了脏读问题，但会有幻读</p>
+</li>
+<li><p>serializable(可串行化)：最高隔离级别，强制事务串行执行，避免幻读问题</p>
+</li>
+</ol>
+<p>查询当前会话级别：select @@tx_isolation;</p>
+<p>查看系统当前隔离级别：select @@global.tx_isolation;</p>
+<p>设置当前会话隔离级别：set session transaction isolatin level repeatable read;</p>
+<p>设置系统当前隔离级别：set global transaction isolation level repeatable read;</p>
+<h5 id="什么是MVCC-MySQL的MVCC原理"><a href="#什么是MVCC-MySQL的MVCC原理" class="headerlink" title="什么是MVCC, MySQL的MVCC原理"></a>什么是MVCC, MySQL的MVCC原理</h5><p>MVCC即多版本并发控制，它能在很多情况下避免加锁操作，降低开销，不同的存储引擎实现方式不同，有乐观并发控制和悲观并发控制</p>
+<p>MySQL的InnoDB引擎，通过在每行记录后面保存两个隐藏的列来实现，一个列保存了行的创建时间，一个保存了行的过期时间（或删除时间）。实际存储的是系统版本号，每开始一个新的事务，系统版本号都会自动递增，事务开始时刻的系统版本号会作为事务的版本号，用来和查询到的每行记录的版本号进行比较。该MVCC只使用在repeatable read 和 read committed下</p>
+<p>保存这两个额外的系统版本号，使大多数读操作都不用加锁，并且也能保证只会读到符合标准的行。缺点是需要额外的存储空间和维护工作。</p>
+<h5 id="Mysql死锁"><a href="#Mysql死锁" class="headerlink" title="Mysql死锁"></a>Mysql死锁</h5><p>死锁是两个或者多个事务在同一资源上互相占用，并请求锁定对方资源，从而导致互相等待的现象。</p>
+<p>死锁示例：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#事务1</span></span><br><span class="line"><span class="keyword">start</span> <span class="keyword">transaction</span>;</span><br><span class="line"><span class="keyword">update</span> stockprice <span class="keyword">set</span> <span class="keyword">close</span> = <span class="number">45</span> <span class="keyword">where</span> stock_id = <span class="number">4</span> <span class="keyword">and</span> <span class="built_in">date</span> = <span class="string">'2019-1-1'</span>;</span><br><span class="line"><span class="keyword">update</span> stockprice <span class="keyword">set</span> <span class="keyword">close</span> = <span class="number">20</span> <span class="keyword">where</span> stock_id = <span class="number">3</span> <span class="keyword">and</span> <span class="built_in">date</span> = <span class="string">'2019-1-3'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#事务2</span></span><br><span class="line"><span class="keyword">start</span> <span class="keyword">transaction</span>;</span><br><span class="line"><span class="keyword">update</span> stockprice <span class="keyword">set</span> <span class="keyword">high</span> = <span class="number">36</span> <span class="keyword">where</span> sockt_id = <span class="number">3</span> <span class="keyword">and</span> <span class="built_in">date</span> = <span class="string">'2019-1-3'</span>;</span><br><span class="line"><span class="keyword">update</span> stockprice <span class="keyword">set</span> hight = <span class="number">60</span> <span class="keyword">where</span> stock_id = <span class="number">4</span> <span class="keyword">and</span> <span class="built_in">date</span> = <span class="string">'20191-1'</span>;</span><br></pre></td></tr></table></figure>
 
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>(1)在全局配置文件（hexo/_config.yml)中将post_asset _folder设置为true；</p>
-<p>(2)创建文章（在创建的时候，会在hexo/source/_post目录下，生成一个XXX.md文件和一个XXX的文件夹）:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"XXX"</span></span><br></pre></td></tr></table></figure>
-<p>(3)把XXX这个博文需要展示的图片放在XXX文件夹目录下；</p>
-<p>(4)在XXX.md文件中引入图片的方式：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img example.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
+<p>两个事务分别执行两个更新语句，都执行第一个语句，锁定了该行数据，但该行数据将做为对方事务执行下条语句的条件，所以当事务继续执行第二条语句的时候，因为需要的条件所在行已被另外一个事务锁定，这是死锁现象</p>
+<p>避免死锁的方法：</p>
+<ul>
+<li>约定以相同的顺序访问表</li>
+<li>大事务分小事务</li>
+<li>一个事务中，一次锁定资源</li>
+<li>锁升级，采用表锁</li>
+</ul>
+<h5 id="Msyql-执行SQL-过程"><a href="#Msyql-执行SQL-过程" class="headerlink" title="Msyql 执行SQL 过程"></a>Msyql 执行SQL 过程</h5><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g78rx8258ij313a0tkn0j.jpg" alt="image-20190922150214605" style="zoom: 45%;" />
 
-<h3 id="添加如下"><a href="#添加如下" class="headerlink" title="添加如下"></a>添加如下</h3><p><img src="img/71862163_p0.jpg" alt="header"></p>
+<ol>
+<li>客户端发送一条查询给服务器</li>
+<li>服务器先检查查询缓存，如果命中了缓存，则立刻返回存储在缓存中的结果。否则进入下一阶段</li>
+<li>服务器端进行SQL解析，预处理，再由优化器生成对应的执行计划</li>
+<li>MySQL根据优化器生成的执行计划，调用存储引擎的API来执行查询</li>
+<li>将结果返回给客户端</li>
+</ol>
+<h5 id="如何优化sql翻页"><a href="#如何优化sql翻页" class="headerlink" title="如何优化sql翻页"></a>如何优化sql翻页</h5><ol>
+<li>只让用户一页页翻，不能跳页</li>
+<li>确定每页的边界值，通过where条件查询来优化</li>
+<li>使用延迟关联，通过使用覆盖索引查询返回需要的主键，再根据这些主键关联原有表获得需要的行</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>,sex,rating <span class="keyword">from</span> mysql_test a <span class="keyword">inner</span> <span class="keyword">join</span> (</span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> mysql_test <span class="keyword">where</span> sex=<span class="string">'F'</span> <span class="keyword">order</span> <span class="keyword">by</span> rating <span class="keyword">limit</span> <span class="number">20000</span>,<span class="number">100</span></span><br><span class="line">) <span class="keyword">as</span> x <span class="keyword">USING</span>(<span class="keyword">id</span>)</span><br></pre></td></tr></table></figure>
+
+<h5 id="如何优化SQL语句"><a href="#如何优化SQL语句" class="headerlink" title="如何优化SQL语句"></a>如何优化SQL语句</h5><ol>
+<li>先看表的数据类型是否设计的合理，遵守选取数据类型越简单越小的原则</li>
+<li>表中的碎片是否整理</li>
+<li>表的统计信息是否收集，只有统计信息准确，执行计划才可以帮助我们优化SQL</li>
+<li>查看执行计划，检查索引的使用情况，没有用到索引，创建索引</li>
+<li>创建索引需要判断这个字段是否适合创建索引，遵守<a href="#建立索引的原则">建立索引的原则</a></li>
+<li>创建索引后，通过explain分析，前后性能变化</li>
+</ol>
+<h5 id="如何分析explain执行计划"><a href="#如何分析explain执行计划" class="headerlink" title="如何分析explain执行计划"></a>如何分析explain执行计划</h5><p>先查看type列，如果出现all关键词，就代表sql执行全表扫描</p>
+<p>再看key列，如果null代表没有使用索引</p>
+<p>再看rows列，如果越大，代表需要扫描的行数越多，相应耗时就长</p>
+<p>最后看 extra列，是否有影响性能的 Using filesort 或者 Using temporary</p>
 
       
 
@@ -256,7 +407,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://dxjin.cn/2019/11/06/%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://dxjin.cn/2019/11/13/8.%20%E6%95%B0%E6%8D%AE%E5%BA%93/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,18 +421,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/13/7.%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/13/11.%20Spring%20Boot/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          7. 数据结构
+          11. Spring Boot
         
       </div>
     </a>
   
   
-    <a href="/2019/11/02/%E8%BF%99%E6%98%AF%E4%B8%AA%E6%B5%8B%E8%AF%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">这是个测试</div>
+    <a href="/2019/11/13/9.%20Redis/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">9. Redis</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -308,7 +459,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一"><span class="toc-number">1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二"><span class="toc-number">2.</span> <span class="toc-text">方法二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加如下"><span class="toc-number">3.</span> <span class="toc-text">添加如下</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据库"><span class="toc-number">1.</span> <span class="toc-text">数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#数据库三大范式、反模式"><span class="toc-number">1.1.</span> <span class="toc-text">数据库三大范式、反模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Mysql-架构图"><span class="toc-number">1.2.</span> <span class="toc-text">Mysql 架构图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#InnoDB存储结构"><span class="toc-number">1.3.</span> <span class="toc-text">InnoDB存储结构</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#存储引擎的-InnoDB与MyISAM区别，优缺点，使用场景"><span class="toc-number">1.4.</span> <span class="toc-text">存储引擎的 InnoDB与MyISAM区别，优缺点，使用场景</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#建立索引的原则"><span class="toc-number">1.5.</span> <span class="toc-text">建立索引的原则</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#B-Tree-索引-和-哈希索引-限制"><span class="toc-number">1.6.</span> <span class="toc-text">B+Tree 索引 和 哈希索引 限制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#事务隔离级别，设置事务方法"><span class="toc-number">1.7.</span> <span class="toc-text">事务隔离级别，设置事务方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#什么是MVCC-MySQL的MVCC原理"><span class="toc-number">1.8.</span> <span class="toc-text">什么是MVCC, MySQL的MVCC原理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Mysql死锁"><span class="toc-number">1.9.</span> <span class="toc-text">Mysql死锁</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Msyql-执行SQL-过程"><span class="toc-number">1.10.</span> <span class="toc-text">Msyql 执行SQL 过程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#如何优化sql翻页"><span class="toc-number">1.11.</span> <span class="toc-text">如何优化sql翻页</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#如何优化SQL语句"><span class="toc-number">1.12.</span> <span class="toc-text">如何优化SQL语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#如何分析explain执行计划"><span class="toc-number">1.13.</span> <span class="toc-text">如何分析explain执行计划</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
